@@ -1,0 +1,22 @@
+﻿@model UserDetailsDto
+
+@{
+    ViewData["Title"] = "User Details";
+}
+
+<h1>User Details</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name @Model.Surname</h5>
+        <p class="card-text">
+            <strong>Username:</strong> @Model.Username<br />
+            <strong>Email:</strong> @Model.Email<br />
+            <strong>Phone:</strong> @Model.Phone<br />
+            <strong>User Type:</strong> @Model.UserTypeName<br />
+            <strong>Create Date:</strong> @Model.CreateDate.ToString("yyyy-MM-dd HH:mm:ss")<br />
+            <strong>Update Date:</strong> @Model.UpdateDate.ToString("yyyy-MM-dd HH:mm:ss")
+        </p>
+        <a href="@Url.Action("Index", "User")" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>

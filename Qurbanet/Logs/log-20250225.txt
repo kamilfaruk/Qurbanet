@@ -1,0 +1,21 @@
+2025-02-25 16:19:55.662 +03:00 [INF] User profile is available. Using 'C:\Users\kamilfaruk.yel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-25 16:19:55.938 +03:00 [INF] Now listening on: https://localhost:7225
+2025-02-25 16:19:55.942 +03:00 [INF] Now listening on: http://localhost:5116
+2025-02-25 16:19:56.030 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-25 16:19:56.033 +03:00 [INF] Hosting environment: Development
+2025-02-25 16:19:56.034 +03:00 [INF] Content root path: C:\Users\kamilfaruk.yel\Desktop\CANTEK-FARMINOVA\A\SchoolManagementSystem\Qurbanet
+2025-02-25 16:19:56.715 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-02-25 16:19:56.845 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-02-25 16:19:56.877 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-02-25 16:19:56.891 +03:00 [INF] Executing ViewResult, running view Index.
+2025-02-25 16:19:56.999 +03:00 [INF] Executed ViewResult - view Index executed in 110.7951ms.
+2025-02-25 16:19:57.005 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 123.8042ms
+2025-02-25 16:19:57.009 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-02-25 16:19:57.011 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=hLiVgltD77bmFfNZudr66yghmiNAaOtYehjSd3I8r5Y - null null
+2025-02-25 16:19:57.020 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 311.3362ms
+2025-02-25 16:19:57.032 +03:00 [INF] Sending file. Request path: '/Qurbanet.styles.css'. Physical path: 'C:\Users\kamilfaruk.yel\Desktop\CANTEK-FARMINOVA\A\SchoolManagementSystem\Qurbanet\obj\Debug\net8.0\scopedcss\bundle\Qurbanet.styles.css'
+2025-02-25 16:19:57.035 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=hLiVgltD77bmFfNZudr66yghmiNAaOtYehjSd3I8r5Y - 200 1130 text/css 24.3983ms
+2025-02-25 16:19:57.163 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-25 16:19:57.163 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-02-25 16:19:57.172 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 9.0575ms
+2025-02-25 16:19:57.221 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.5258ms
