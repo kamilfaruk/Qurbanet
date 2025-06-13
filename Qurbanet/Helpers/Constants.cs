@@ -42,6 +42,13 @@ namespace Qurbanet.Helpers
         public static class Tables
         {
             public const string Users = "Users";
+            public const string Organizations = "Organizations";
+            public const string Animals = "Animals";
+            public const string Customers = "Customers";
+            public const string Sales = "Sales";
+            public const string Payments = "Payments";
+            public const string CuttingEvents = "CuttingEvents";
+            public const string SystemLogs = "SystemLogs";
         }
 
         public static class ValidationConstants

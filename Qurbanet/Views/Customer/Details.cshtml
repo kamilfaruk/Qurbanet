@@ -1,0 +1,14 @@
+@model Qurbanet.Models.DTOs.Customer.CustomerDetailsDto
+@{
+    ViewData["Title"] = "Customer Details";
+}
+<h1>@Model.FullName</h1>
+<p>Phone: @Model.PhoneNumber</p>
+@if (!string.IsNullOrEmpty(Model.Email))
+{
+    <p>Email: @Model.Email</p>
+}
+@if (!string.IsNullOrEmpty(Model.Notes))
+{
+    <p>Notes: @Model.Notes</p>
+}

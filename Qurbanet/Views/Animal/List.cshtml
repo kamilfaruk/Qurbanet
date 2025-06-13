@@ -1,0 +1,20 @@
+@model IEnumerable<Qurbanet.Models.DTOs.Animal.AnimalListDto>
+@{
+    ViewData["Title"] = "Animals";
+    var organizationId = ViewBag.OrganizationId as int? ?? 0;
+}
+<h1>Animals</h1>
+<a asp-action="Create" asp-route-organizationId="@organizationId" class="btn btn-success mb-2">Add Animal</a>
+<table class="table">
+    <thead><tr><th>Name</th><th>Species</th><th>Status</th></tr></thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>@item.NameOrTag</td>
+            <td>@item.Species</td>
+            <td>@item.Status</td>
+        </tr>
+}
+    </tbody>
+</table>
