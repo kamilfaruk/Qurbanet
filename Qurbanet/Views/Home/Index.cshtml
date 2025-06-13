@@ -1,73 +1,55 @@
-﻿@{
+@{
     ViewData["Title"] = "Ana Sayfa";
 }
 
 <div class="container mt-5">
-    <!-- Hero Bölümü -->
+    <!-- Hero Section -->
     <div class="row align-items-center mb-5">
         <div class="col-lg-6">
-            <h1 class="display-4">SMS'e Hoş Geldiniz</h1>
-            <p class="lead text-muted">
-                Kullanıcılarınızı ve verilerinizi kolayca yönetin. Güçlü ve kullanıcı dostu bir platform sunuyoruz.
-            </p>
-            <a href="@Url.Action("Index", "User")" class="btn btn-primary btn-lg mt-3">Kullanıcıları Yönet</a>
+            <h1 class="display-4">Kurban Takip Sistemine Hoş Geldiniz</h1>
+            <p class="lead text-muted">Organizasyonlarınızı, hayvanlarınızı, satışlarınızı ve müşteri ödemelerinizi tek bir yerden yönetin.</p>
+            <a href="@Url.Action("Index", "Organization")" class="btn btn-primary btn-lg mt-3">Organizasyonları Görüntüle</a>
         </div>
         <div class="col-lg-6 text-center">
-            <img src="https://via.placeholder.com/500x300" alt="Hoş Geldiniz Görseli" class="img-fluid rounded shadow">
+            <img src="https://via.placeholder.com/500x300" alt="Kurban Takip" class="img-fluid rounded shadow hero-image">
         </div>
     </div>
 
-    <!-- Özellikler Bölümü -->
+    <!-- Feature Cards -->
     <div class="row text-center mb-5">
-        <div class="col-md-4">
-            <div class="card shadow-sm border-0">
-                <div class="card-body">
-                    <h5 class="card-title">Kullanıcı Yönetimi</h5>
-                    <p class="card-text">Kullanıcıları kolayca ekleyin, güncelleyin ve yönetin.</p>
-                    <a href="@Url.Action("Create", "User")" class="btn btn-outline-primary">Yeni Kullanıcı Ekle</a>
+        <div class="col-md-3 mb-3">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Organizasyonlar</h5>
+                    <p class="card-text flex-grow-1">Tüm kurban organizasyonlarınızı buradan yönetin.</p>
+                    <a href="@Url.Action("Index", "Organization")" class="btn btn-outline-primary mt-auto">Listele</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card shadow-sm border-0">
-                <div class="card-body">
-                    <h5 class="card-title">Veri Analitiği</h5>
-                    <p class="card-text">Platformunuzla ilgili değerli analizlere erişin.</p>
-                    <a href="#" class="btn btn-outline-primary">Raporları Görüntüle</a>
+        <div class="col-md-3 mb-3">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Hayvanlar</h5>
+                    <p class="card-text flex-grow-1">Her organizasyona ait hayvan kayıtlarını takip edin.</p>
+                    <a href="@Url.Action("Index", "Organization")" class="btn btn-outline-primary mt-auto">Hayvanları Gör</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card shadow-sm border-0">
-                <div class="card-body">
-                    <h5 class="card-title">Güvenli Erişim</h5>
-                    <p class="card-text">Verilerinizi korumak için tasarlanmış güvenli bir sistem.</p>
-                    <a href="#" class="btn btn-outline-primary">Daha Fazla Bilgi</a>
+        <div class="col-md-3 mb-3">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Müşteriler</h5>
+                    <p class="card-text flex-grow-1">Satış yaptığınız müşterileri ve iletişim bilgilerini yönetin.</p>
+                    <a href="@Url.Action("Index", "Customer")" class="btn btn-outline-primary mt-auto">Müşterileri Yönet</a>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Kullanıcı Görüşleri Bölümü -->
-    <div class="row">
-        <h2 class="text-center mb-4">Kullanıcılarımız Ne Diyor?</h2>
-        <div class="col-md-6 mb-4">
-            <div class="card border-0 shadow">
-                <div class="card-body">
-                    <blockquote class="blockquote">
-                        <p>"SMS, verilerimizi yönetme şeklimizi tamamen değiştirdi. Kullanıcı dostu ve çok verimli!"</p>
-                        <footer class="blockquote-footer">Ahmet Yılmaz, <cite title="Şirket">Tekno Bilişim</cite></footer>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-4">
-            <div class="card border-0 shadow">
-                <div class="card-body">
-                    <blockquote class="blockquote">
-                        <p>"Platformun ne kadar basit ve sezgisel olduğunu çok seviyorum. Şiddetle tavsiye ederim!"</p>
-                        <footer class="blockquote-footer">Zeynep Kaya, <cite title="Şirket">Akıllı Çözümler</cite></footer>
-                    </blockquote>
+        <div class="col-md-3 mb-3">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Satışlar</h5>
+                    <p class="card-text flex-grow-1">Hayvan satışlarını ve ödeme hareketlerini takip edin.</p>
+                    <a href="@Url.Action("Index", "Sale")" class="btn btn-outline-primary mt-auto">Satışları Görüntüle</a>
                 </div>
             </div>
         </div>
