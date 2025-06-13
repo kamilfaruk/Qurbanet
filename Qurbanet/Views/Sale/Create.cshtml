@@ -1,0 +1,29 @@
+@model Qurbanet.Models.DTOs.Sale.CreateSaleDto
+@{
+    ViewData["Title"] = "Create Sale";
+}
+<h1>Create Sale</h1>
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="AnimalId" class="form-label"></label>
+        <input asp-for="AnimalId" class="form-control" />
+        <span asp-validation-for="AnimalId" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="CustomerId" class="form-label"></label>
+        <input asp-for="CustomerId" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="SalePrice" class="form-label"></label>
+        <input asp-for="SalePrice" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="AmountPaid" class="form-label"></label>
+        <input asp-for="AmountPaid" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Notes" class="form-label"></label>
+        <textarea asp-for="Notes" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

@@ -23,6 +23,13 @@ namespace Qurbanet.Extensions
 
             // Service'ler
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IOrganizationService, OrganizationService>();
+            services.AddScoped<IAnimalService, AnimalService>();
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<ISaleService, SaleService>();
+            services.AddScoped<IPaymentService, PaymentService>();
+            services.AddScoped<ICuttingEventService, CuttingEventService>();
+            services.AddScoped<ISystemLogService, SystemLogService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             // FluentValidation
