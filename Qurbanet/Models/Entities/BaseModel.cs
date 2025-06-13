@@ -10,6 +10,6 @@ namespace Qurbanet.Models.Entities
         public DateTime UpdateDate { get; set; }
         public int CreateUserId { get; set; }
         public int UpdateUserId { get; set; }
-        public bool Closed { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }
