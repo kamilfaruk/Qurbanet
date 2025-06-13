@@ -26,7 +26,7 @@ namespace Qurbanet.Models.Configurations
             builder.Property(b => b.UpdateUserId)
                 .IsRequired();
 
-            builder.Property(b => b.Closed)
+            builder.Property(b => b.IsDeleted)
                 .HasDefaultValue(false);
         }
     }
