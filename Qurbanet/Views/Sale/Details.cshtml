@@ -1,0 +1,15 @@
+@model Qurbanet.Models.DTOs.Sale.SaleDetailsDto
+@{
+    ViewData["Title"] = "Sale Details";
+}
+<h1>Sale</h1>
+<p>Animal: @Model.AnimalId</p>
+<p>Customer: @Model.CustomerId</p>
+<p>Price: @Model.SalePrice</p>
+<p>Paid: @Model.AmountPaid</p>
+<p>Remaining: @Model.RemainingAmount</p>
+<p>Date: @Model.SaleDate</p>
+@if (!string.IsNullOrEmpty(Model.Notes))
+{
+    <p>Notes: @Model.Notes</p>
+}

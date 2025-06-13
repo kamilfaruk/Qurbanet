@@ -1,0 +1,12 @@
+@model Qurbanet.Models.DTOs.Animal.AnimalDetailsDto
+@{
+    ViewData["Title"] = "Animal Details";
+}
+<h1>@Model.NameOrTag</h1>
+<p>Species: @Model.Species</p>
+<p>Breed: @Model.Breed</p>
+<p>Gender: @Model.Gender</p>
+<p>Weight: @Model.WeightKg kg</p>
+<p>Price: @Model.Price</p>
+<p>Status: @Model.Status</p>
+<p>Notes: @Model.Notes</p>
