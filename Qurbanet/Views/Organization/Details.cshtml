@@ -1,0 +1,26 @@
+@model Qurbanet.Models.DTOs.Organization.OrganizationDetailsDto
+@{
+    ViewData["Title"] = "Organization Details";
+}
+<h1>@Model.Name</h1>
+<p>Year: @Model.Year</p>
+<p>Paid: @Model.IsPaid</p>
+<p>Start: @Model.StartDate.ToShortDateString()</p>
+<p>End: @Model.EndDate.ToShortDateString()</p>
+<h2>Animals</h2>
+<a asp-controller="Animal" asp-action="Create" asp-route-organizationId="@Model.Id" class="btn btn-success mb-2">Add Animal</a>
+<table class="table">
+    <thead>
+        <tr><th>Name</th><th>Species</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+    @foreach (var a in Model.Animals)
+    {
+        <tr>
+            <td>@a.NameOrTag</td>
+            <td>@a.Species</td>
+            <td>@a.Status</td>
+        </tr>
+    }
+    </tbody>
+</table>

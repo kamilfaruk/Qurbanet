@@ -99,5 +99,12 @@ namespace Qurbanet.Services
             }
             await userRepository.DeleteAsync(user);
         }
+
+        public async Task<User?> AuthenticateAsync(string username, string password)
+        {
+            var repo = _unitOfWork.Repository<User>();
+            var users = await repo.FindAsync(u => u.Username == username && u.Password == password);
+            return users.FirstOrDefault();
+        }
     }
 }

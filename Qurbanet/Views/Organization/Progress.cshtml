@@ -1,0 +1,12 @@
+@model Qurbanet.Models.DTOs.Organization.OrganizationProgressDto
+@{
+    ViewData["Title"] = "Organization Progress";
+}
+<h1>Kesim İlerlemesi</h1>
+<table class="table">
+    <tr><th>Aşama</th><th>Aktif Sıra</th></tr>
+    <tr><td>Kesim</td><td>@Model.CuttingOrder</td></tr>
+    <tr><td>Deri Yüzme</td><td>@Model.SkinningOrder</td></tr>
+    <tr><td>Parçalama</td><td>@Model.ChoppingOrder</td></tr>
+    <tr><td>Teslim Edilen Sayısı</td><td>@Model.DeliveredCount</td></tr>
+</table>
