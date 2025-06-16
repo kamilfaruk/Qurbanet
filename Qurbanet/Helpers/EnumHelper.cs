@@ -22,7 +22,7 @@ namespace Qurbanet.Helpers
                     return (T)Enum.Parse(typeof(T), field.Name);
                 }
             }
-            throw new ArgumentException($"No matching enum value found for description: {description}");
+            throw Constants.CustomExceptions.InvalidFormat;
         }
     }
 }

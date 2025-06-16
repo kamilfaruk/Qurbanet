@@ -13,7 +13,9 @@ namespace Qurbanet.Models.Configurations
 
             builder.ToTable(Constants.Tables.CuttingEvents);
 
-            builder.Property(c => c.Stage).IsRequired();
+            builder.Property(c => c.Stage)
+                .HasConversion<string>()
+                .IsRequired();
             builder.Property(c => c.OrderNumber).IsRequired();
 
             builder.HasOne(c => c.Animal)

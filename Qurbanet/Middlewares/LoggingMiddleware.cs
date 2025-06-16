@@ -104,7 +104,7 @@ namespace Qurbanet.Middlewares
 
             if (!viewResult.Success)
             {
-                throw new FileNotFoundException($"The view '{viewPath}' was not found.");
+                throw Helpers.Constants.CustomExceptions.NotFound;
             }
 
             var viewContext = new ViewContext(

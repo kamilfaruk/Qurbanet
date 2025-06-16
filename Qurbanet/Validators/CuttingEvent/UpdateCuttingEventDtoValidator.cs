@@ -7,7 +7,7 @@ namespace Qurbanet.Validators.CuttingEvent
     {
         public UpdateCuttingEventDtoValidator()
         {
-            RuleFor(x => x.Stage).NotEmpty();
+            RuleFor(x => x.Stage).IsInEnum();
             RuleFor(x => x.OrderNumber).GreaterThan(0);
         }
     }
