@@ -4,7 +4,9 @@ using Qurbanet.Models.Entities;
 using Qurbanet.Models.DTOs.Organization;
 using Qurbanet.Services.Interfaces;
 using System.Linq;
+using System.Collections.Generic;
 using Qurbanet.Helpers;
+using Qurbanet.Services.Common;
 
 namespace Qurbanet.Services
 {
@@ -13,12 +15,14 @@ namespace Qurbanet.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly ILogger<OrganizationService> _logger;
+        private readonly ICurrentUserService _currentUserService;
 
-        public OrganizationService(IUnitOfWork unitOfWork, IMapper mapper, ILogger<OrganizationService> logger)
+        public OrganizationService(IUnitOfWork unitOfWork, IMapper mapper, ILogger<OrganizationService> logger, ICurrentUserService currentUserService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _logger = logger;
+            _currentUserService = currentUserService;
         }
 
         public async Task<List<OrganizationListDto>> GetAllAsync()
@@ -85,6 +89,42 @@ namespace Qurbanet.Services
                 DeliveredCount = events.Count(e => e.Stage == Models.Enums.Stage.Teslim && e.EndTime != null)
             };
             return progress;
+        }
+
+        public async Task<List<OrganizationListDto>> GetDashboardOrganizationsAsync()
+        {
+            var repo = _unitOfWork.Repository<Organization>();
+            IEnumerable<Organization> orgs;
+
+            var userId = _currentUserService.UserId;
+            if (userId == null)
+            {
+                orgs = await repo.FindAsync(o => o.Name.Contains("Demo"));
+                orgs = orgs.Take(1);
+            }
+            else
+            {
+                var user = await _unitOfWork.Repository<User>().GetByIdAsync(userId.Value);
+                if (user == null)
+                {
+                    orgs = new List<Organization>();
+                }
+                else if (user.UserType == Models.Enums.UserType.Admin)
+                {
+                    orgs = await repo.GetAllAsync();
+                }
+                else if (user.UserType == Models.Enums.UserType.Organizer)
+                {
+                    orgs = await repo.FindAsync(o => o.UserId == userId.Value);
+                }
+                else
+                {
+                    orgs = await repo.FindAsync(o => o.Name.Contains("Demo"));
+                    orgs = orgs.Take(1);
+                }
+            }
+
+            return _mapper.Map<List<OrganizationListDto>>(orgs.ToList());
         }
     }
 }
