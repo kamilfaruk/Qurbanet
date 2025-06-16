@@ -244,3 +244,39 @@ FROM "Organizations" AS "o"
 2025-06-16 22:58:43.495 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
 2025-06-16 22:58:43.509 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 14.8408ms
 2025-06-16 22:58:43.519 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.2887ms
+2025-06-16 23:31:30.047 +03:00 [INF] User profile is available. Using 'C:\Users\kamil\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 23:31:30.396 +03:00 [INF] Now listening on: https://localhost:7225
+2025-06-16 23:31:30.398 +03:00 [INF] Now listening on: http://localhost:5116
+2025-06-16 23:31:30.479 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 23:31:30.481 +03:00 [INF] Hosting environment: Development
+2025-06-16 23:31:30.482 +03:00 [INF] Content root path: C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet
+2025-06-16 23:31:30.960 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 23:31:31.087 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:31:31.131 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 23:31:31.150 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:31:31.259 +03:00 [INF] Executed ViewResult - view Index executed in 112.6572ms.
+2025-06-16 23:31:31.268 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 133.6557ms
+2025-06-16 23:31:31.270 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:31:31.279 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-06-16 23:31:31.279 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/jquery/dist/jquery.min.js - null null
+2025-06-16 23:31:31.289 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 332.0523ms
+2025-06-16 23:31:31.279 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - null null
+2025-06-16 23:31:31.279 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - null null
+2025-06-16 23:31:31.345 +03:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-06-16 23:31:31.345 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-06-16 23:31:31.345 +03:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\css\site.css'
+2025-06-16 23:31:31.345 +03:00 [INF] Sending file. Request path: '/Qurbanet.styles.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\obj\Debug\net8.0\scopedcss\bundle\Qurbanet.styles.css'
+2025-06-16 23:31:31.348 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/jquery/dist/jquery.min.js - 200 89503 text/javascript 68.2812ms
+2025-06-16 23:31:31.349 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/css/bootstrap.min.css - 200 162726 text/css 70.5052ms
+2025-06-16 23:31:31.351 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - 200 362 text/css 72.1264ms
+2025-06-16 23:31:31.352 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - 200 1207 text/css 72.8738ms
+2025-06-16 23:31:31.443 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-06-16 23:31:31.443 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:31:31.443 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2025-06-16 23:31:31.451 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-06-16 23:31:31.444 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:31:31.459 +03:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\js\site.js'
+2025-06-16 23:31:31.460 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 17.0344ms
+2025-06-16 23:31:31.461 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78474 text/javascript 18.2604ms
+2025-06-16 23:31:31.467 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 231 text/javascript 23.503ms
+2025-06-16 23:31:31.513 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.4834ms
