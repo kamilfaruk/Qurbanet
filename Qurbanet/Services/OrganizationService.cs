@@ -91,6 +91,29 @@ namespace Qurbanet.Services
             return progress;
         }
 
+        public async Task<OrganizationFinancialSummaryDto> GetFinancialSummaryAsync(int id)
+        {
+            var animalRepo = _unitOfWork.Repository<Animal>();
+            var saleRepo = _unitOfWork.Repository<Sale>();
+
+            var animals = await animalRepo.FindAsync(a => a.OrganizationId == id);
+            var animalIds = animals.Select(a => a.Id).ToList();
+            var sales = await saleRepo.FindAsync(s => animalIds.Contains(s.AnimalId));
+
+            var totalAnimals = animals.Count();
+            var soldAnimals = sales.Count();
+            var totalDue = sales.Sum(s => s.SalePrice);
+            var totalPaid = sales.Sum(s => s.AmountPaid);
+
+            return new OrganizationFinancialSummaryDto
+            {
+                TotalAnimals = totalAnimals,
+                SoldAnimals = soldAnimals,
+                TotalDue = totalDue,
+                TotalPaid = totalPaid
+            };
+        }
+
         public async Task<List<OrganizationListDto>> GetDashboardOrganizationsAsync()
         {
             var repo = _unitOfWork.Repository<Organization>();

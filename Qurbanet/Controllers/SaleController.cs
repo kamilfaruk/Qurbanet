@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Qurbanet.Models.DTOs.Sale;
 using Qurbanet.Services.Interfaces;
 using Qurbanet.Models.Enums;
+using Qurbanet.Models.DTOs.Payment;
 
 namespace Qurbanet.Controllers
 {
@@ -10,10 +11,12 @@ namespace Qurbanet.Controllers
     public class SaleController : Controller
     {
         private readonly ISaleService _service;
+        private readonly IPaymentService _paymentService;
 
-        public SaleController(ISaleService service)
+        public SaleController(ISaleService service, IPaymentService paymentService)
         {
             _service = service;
+            _paymentService = paymentService;
         }
 
         public async Task<IActionResult> Index()
@@ -25,14 +28,17 @@ namespace Qurbanet.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var sale = await _service.GetByIdAsync(id);
+            var payments = await _paymentService.GetAllBySaleAsync(id);
+            ViewBag.Payments = payments;
             return View(sale);
         }
 
         [HttpGet]
         [Authorize(Roles = nameof(UserType.Organizer) + "," + nameof(UserType.Admin))]
-        public IActionResult Create()
+        public IActionResult Create(int animalId)
         {
-            return View();
+            var dto = new CreateSaleDto { AnimalId = animalId };
+            return View(dto);
         }
 
         [HttpPost]

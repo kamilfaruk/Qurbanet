@@ -13,3 +13,23 @@
 {
     <p>Notes: @Model.Notes</p>
 }
+
+@{
+    var payments = ViewBag.Payments as List<Qurbanet.Models.DTOs.Payment.PaymentListDto> ?? new();
+}
+<h2>Ödemeler</h2>
+<a asp-controller="Payment" asp-action="Create" asp-route-saleId="@Model.Id" class="btn btn-success btn-sm mb-2">Ödeme Ekle</a>
+<table class="table">
+    <thead>
+        <tr><th>Tutar</th><th>Tarih</th></tr>
+    </thead>
+    <tbody>
+    @foreach(var p in payments)
+    {
+        <tr>
+            <td>@p.Amount</td>
+            <td>@p.PaymentDate.ToShortDateString()</td>
+        </tr>
+    }
+    </tbody>
+</table>
