@@ -6,6 +6,8 @@ using Qurbanet.Database.Repositories;
 using Qurbanet.Models.Mappers;
 using Qurbanet.Services;
 using Qurbanet.Services.Interfaces;
+using Microsoft.AspNetCore.Http;
+using Qurbanet.Services.Common;
 
 namespace Qurbanet.Extensions
 {
@@ -20,6 +22,9 @@ namespace Qurbanet.Extensions
             // Repository'ler
             services.AddScoped(typeof(BaseRepository<>));
             services.AddScoped<UserRepository>();
+            services.AddScoped<AnimalRepository>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<ICurrentUserService, CurrentUserService>();
 
             // Service'ler
             services.AddScoped<IUserService, UserService>();

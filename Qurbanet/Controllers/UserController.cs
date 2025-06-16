@@ -3,10 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using Qurbanet.Helpers;
 using Qurbanet.Models.DTOs.User;
 using Qurbanet.Services.Interfaces;
+using Qurbanet.Models.Enums;
 
 namespace Qurbanet.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = nameof(UserType.Admin))]
     public class UserController : Controller
     {
         private readonly IUserService _userService;

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Qurbanet.Models.DTOs.Animal;
 using Qurbanet.Services.Interfaces;
+using Qurbanet.Models.Enums;
 
 namespace Qurbanet.Controllers
 {
@@ -29,7 +30,7 @@ namespace Qurbanet.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Organizer,Admin")]
+        [Authorize(Roles = nameof(UserType.Organizer) + "," + nameof(UserType.Admin))]
         public IActionResult Create(int organizationId)
         {
             ViewBag.OrganizationId = organizationId;
@@ -38,7 +39,7 @@ namespace Qurbanet.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Organizer,Admin")]
+        [Authorize(Roles = nameof(UserType.Organizer) + "," + nameof(UserType.Admin))]
         public async Task<IActionResult> Create(CreateAnimalDto dto)
         {
             if (!ModelState.IsValid)
