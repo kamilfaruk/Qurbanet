@@ -1,10 +1,14 @@
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Qurbanet.Extensions;
 using Qurbanet.Validators.User;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Serilog yap˝land˝rmas˝
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options => { options.LoginPath = "/Account/Login"; options.LogoutPath = "/Account/Logout"; });
+app.UseAuthentication();
+// Serilog yap√Ωland√Ωrmas√Ω
 builder.AddSerilogLogging();
 
 // Add services to the container.

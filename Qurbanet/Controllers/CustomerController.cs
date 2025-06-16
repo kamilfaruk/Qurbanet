@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Qurbanet.Models.DTOs.Customer;
 using Qurbanet.Services.Interfaces;
 
 namespace Qurbanet.Controllers
 {
+    [Authorize]
     public class CustomerController : Controller
     {
         private readonly ICustomerService _service;
@@ -26,6 +28,7 @@ namespace Qurbanet.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Organizer,Admin")]
         public IActionResult Create()
         {
             return View();
@@ -33,6 +36,7 @@ namespace Qurbanet.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Organizer,Admin")]
         public async Task<IActionResult> Create(CreateCustomerDto dto)
         {
             if (!ModelState.IsValid)

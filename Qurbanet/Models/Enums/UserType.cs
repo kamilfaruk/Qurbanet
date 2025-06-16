@@ -6,7 +6,7 @@ namespace Qurbanet.Models.Enums
     {
         [Description("KULLANICI")]
         User = 1,
-        [Description("ORGANİZATÖR")]
+        [Description("ORGANIZER")]
         Organizer = 2,
         [Description("YÖNETİCİ")]
         Admin = 3

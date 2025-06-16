@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Qurbanet.Helpers;
 using Qurbanet.Models.DTOs.User;
 using Qurbanet.Services.Interfaces;
 
 namespace Qurbanet.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class UserController : Controller
     {
         private readonly IUserService _userService;

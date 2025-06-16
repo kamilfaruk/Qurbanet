@@ -9,5 +9,6 @@ namespace Qurbanet.Services.Interfaces
         Task CreateAsync(CreateOrganizationDto dto);
         Task UpdateAsync(UpdateOrganizationDto dto);
         Task DeleteAsync(int id);
+        Task<OrganizationProgressDto> GetProgressAsync(int id);
     }
 }

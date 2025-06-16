@@ -10,5 +10,6 @@ namespace Qurbanet.Services.Interfaces
         Task CreateUserAsync(CreateUserDto user);
         Task UpdateUserAsync(UpdateUserDto user);
         Task DeleteUserAsync(int id);
+        Task<User?> AuthenticateAsync(string username, string password);
     }
 }

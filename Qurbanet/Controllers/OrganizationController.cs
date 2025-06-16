@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Qurbanet.Models.DTOs.Organization;
 using Qurbanet.Services.Interfaces;
 
 namespace Qurbanet.Controllers
 {
+    [Authorize]
     public class OrganizationController : Controller
     {
         private readonly IOrganizationService _service;
@@ -19,6 +21,13 @@ namespace Qurbanet.Controllers
             return View(list);
         }
 
+        [AllowAnonymous]
+        public async Task<IActionResult> Progress(int id)
+        {
+            var progress = await _service.GetProgressAsync(id);
+            return View(progress);
+        }
+
         public async Task<IActionResult> Details(int id)
         {
             var org = await _service.GetByIdAsync(id);
@@ -26,6 +35,7 @@ namespace Qurbanet.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Organizer,Admin")]
         public IActionResult Create()
         {
             return View();
@@ -33,6 +43,7 @@ namespace Qurbanet.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Organizer,Admin")]
         public async Task<IActionResult> Create(CreateOrganizationDto dto)
         {
             if (!ModelState.IsValid)

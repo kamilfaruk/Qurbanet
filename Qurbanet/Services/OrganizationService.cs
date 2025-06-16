@@ -3,6 +3,7 @@ using Qurbanet.Database;
 using Qurbanet.Models.Entities;
 using Qurbanet.Models.DTOs.Organization;
 using Qurbanet.Services.Interfaces;
+using System.Linq;
 using Qurbanet.Helpers;
 
 namespace Qurbanet.Services
@@ -63,6 +64,21 @@ namespace Qurbanet.Services
                 throw Constants.CustomExceptions.NotFoundWithId(id);
             }
             await repo.DeleteAsync(entity);
+        }
+
+        public async Task<OrganizationProgressDto> GetProgressAsync(int id)
+        {
+            var evRepo = _unitOfWork.Repository<CuttingEvent>();
+            var events = await evRepo.FindAsync(e => e.Animal.OrganizationId == id);
+
+            var progress = new OrganizationProgressDto
+            {
+                CuttingOrder = events.Where(e => e.Stage == "Kesim" && e.EndTime == null).OrderBy(e => e.OrderNumber).FirstOrDefault()?.OrderNumber,
+                SkinningOrder = events.Where(e => e.Stage == "DeriYüzme" && e.EndTime == null).OrderBy(e => e.OrderNumber).FirstOrDefault()?.OrderNumber,
+                ChoppingOrder = events.Where(e => e.Stage == "Parçalama" && e.EndTime == null).OrderBy(e => e.OrderNumber).FirstOrDefault()?.OrderNumber,
+                DeliveredCount = events.Count(e => e.Stage == "Teslim" && e.EndTime != null)
+            };
+            return progress;
         }
     }
 }
