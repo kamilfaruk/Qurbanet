@@ -10,5 +10,6 @@ namespace Qurbanet.Services.Interfaces
         Task UpdateAsync(UpdateOrganizationDto dto);
         Task DeleteAsync(int id);
         Task<OrganizationProgressDto> GetProgressAsync(int id);
+        Task<List<OrganizationListDto>> GetDashboardOrganizationsAsync();
     }
 }

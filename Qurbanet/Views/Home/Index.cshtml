@@ -1,57 +1,41 @@
+@model IEnumerable<Qurbanet.Models.DTOs.Organization.OrganizationListDto>
 @{
-    ViewData["Title"] = "Ana Sayfa";
+    ViewData["Title"] = "Dashboard";
 }
-
-<div class="container mt-5">
-    <!-- Hero Section -->
-    <div class="row align-items-center mb-5">
-        <div class="col-lg-6">
-            <h1 class="display-4">Kurban Takip Sistemine Hoş Geldiniz</h1>
-            <p class="lead text-muted">Organizasyonlarınızı, hayvanlarınızı, satışlarınızı ve müşteri ödemelerinizi tek bir yerden yönetin.</p>
-            <a href="@Url.Action("Index", "Organization")" class="btn btn-primary btn-lg mt-3">Organizasyonları Görüntüle</a>
-        </div>
-        <div class="col-lg-6 text-center">
-            <img src="https://via.placeholder.com/500x300" alt="Kurban Takip" class="img-fluid rounded shadow hero-image">
-        </div>
-    </div>
-
-    <!-- Feature Cards -->
-    <div class="row text-center mb-5">
-        <div class="col-md-3 mb-3">
-            <div class="card h-100 shadow-sm border-0">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Organizasyonlar</h5>
-                    <p class="card-text flex-grow-1">Tüm kurban organizasyonlarınızı buradan yönetin.</p>
-                    <a href="@Url.Action("Index", "Organization")" class="btn btn-outline-primary mt-auto">Listele</a>
+<div class="page-heading">
+    <h3>Dashboard</h3>
+</div>
+<div class="page-content">
+    <section class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Organizasyonlar</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Ad</th>
+                                    <th>Yıl</th>
+                                    <th>Ödendi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Name</td>
+                                        <td>@item.Year</td>
+                                        <td>@(item.IsPaid ? "Evet" : "Hayır")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-3">
-            <div class="card h-100 shadow-sm border-0">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Hayvanlar</h5>
-                    <p class="card-text flex-grow-1">Her organizasyona ait hayvan kayıtlarını takip edin.</p>
-                    <a href="@Url.Action("Index", "Organization")" class="btn btn-outline-primary mt-auto">Hayvanları Gör</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-3">
-            <div class="card h-100 shadow-sm border-0">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Müşteriler</h5>
-                    <p class="card-text flex-grow-1">Satış yaptığınız müşterileri ve iletişim bilgilerini yönetin.</p>
-                    <a href="@Url.Action("Index", "Customer")" class="btn btn-outline-primary mt-auto">Müşterileri Yönet</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-3">
-            <div class="card h-100 shadow-sm border-0">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Satışlar</h5>
-                    <p class="card-text flex-grow-1">Hayvan satışlarını ve ödeme hareketlerini takip edin.</p>
-                    <a href="@Url.Action("Index", "Sale")" class="btn btn-outline-primary mt-auto">Satışları Görüntüle</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </section>
 </div>

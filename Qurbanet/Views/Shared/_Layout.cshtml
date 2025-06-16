@@ -1,84 +1,110 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Qurbanet</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/template/mazer/dist/assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/template/mazer/dist/assets/vendors/iconly/bold.css" />
+    <link rel="stylesheet" href="~/template/mazer/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="~/template/mazer/dist/assets/vendors/bootstrap-icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="~/template/mazer/dist/assets/css/app.css" />
+    <link rel="shortcut icon" href="~/template/mazer/dist/assets/images/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Qurbanet.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">Kurbanet</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a asp-controller="Home" asp-action="Index"><img src="~/template/mazer/dist/assets/images/logo/logo.png" alt="Logo" /></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Menu</li>
+                        <li class="sidebar-item">
+                            <a asp-controller="Home" asp-action="Index" class="sidebar-link">
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Guide">Rehber</a>
+                        <li class="sidebar-item">
+                            <a asp-controller="Organization" asp-action="Index" class="sidebar-link">
+                                <i class="bi bi-collection-fill"></i>
+                                <span>Organizasyonlar</span>
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Organization" asp-action="Index">Organizasyonlar</a>
+                        <li class="sidebar-item">
+                            <a asp-controller="Customer" asp-action="Index" class="sidebar-link">
+                                <i class="bi bi-people-fill"></i>
+                                <span>Müşteriler</span>
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Customer" asp-action="Index">Müşteriler</a>
+                        <li class="sidebar-item">
+                            <a asp-controller="Sale" asp-action="Index" class="sidebar-link">
+                                <i class="bi bi-basket-fill"></i>
+                                <span>Satışlar</span>
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Sale" asp-action="Index">Satışlar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Customer" asp-action="Index">Müşteriler</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Sale" asp-action="Index">Satışlar</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        @if (User.Identity?.IsAuthenticated ?? false)
-                        {
-                            <li class="nav-item">
-                                <span class="navbar-text me-2">@User.Identity.Name</span>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="Account" asp-action="Logout">Çıkış Yap</a>
-                            </li>
-                        }
-                        else
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="Account" asp-action="Login">Giriş</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="Account" asp-action="Register">Kayıt Ol</a>
-                            </li>
-                        }
                     </ul>
                 </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Qurbanet - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+                <nav class="navbar navbar-expand navbar-light">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav ms-auto">
+                            @if (User.Identity?.IsAuthenticated ?? false)
+                            {
+                                <li class="nav-item me-3">
+                                    <span class="text-muted">@User.Identity.Name</span>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="Account" asp-action="Logout" class="nav-link">Çıkış Yap</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a asp-controller="Account" asp-action="Login" class="nav-link">Giriş</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="Account" asp-action="Register" class="nav-link">Kayıt Ol</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <main class="pb-3">
+                @RenderBody()
+            </main>
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2025 &copy; Qurbanet</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="~/template/mazer/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="~/template/mazer/dist/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/template/mazer/dist/assets/js/main.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
