@@ -4,6 +4,7 @@ using Qurbanet.Models.Entities;
 using Qurbanet.Models.DTOs.Organization;
 using Qurbanet.Services.Interfaces;
 using System.Linq;
+using Qurbanet.Helpers;
 
 namespace Qurbanet.Services
 {

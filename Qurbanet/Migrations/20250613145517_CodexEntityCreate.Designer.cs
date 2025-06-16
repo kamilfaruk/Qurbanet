@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Qurbanet.Database;
 
@@ -10,9 +11,11 @@ using Qurbanet.Database;
 namespace Qurbanet.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250613145517_CodexEntityCreate")]
+    partial class CodexEntityCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.1");
@@ -27,6 +30,11 @@ namespace Qurbanet.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("Closed")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasDefaultValue(false);
+
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT")
@@ -38,11 +46,6 @@ namespace Qurbanet.Migrations
                     b.Property<string>("Gender")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasDefaultValue(false);
 
                     b.Property<string>("NameOrTag")
                         .IsRequired()
@@ -89,6 +92,11 @@ namespace Qurbanet.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("Closed")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasDefaultValue(false);
+
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT")
@@ -103,11 +111,6 @@ namespace Qurbanet.Migrations
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasDefaultValue(false);
 
                     b.Property<string>("Notes")
                         .HasColumnType("TEXT");
@@ -138,6 +141,11 @@ namespace Qurbanet.Migrations
                     b.Property<int>("AnimalId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("Closed")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasDefaultValue(false);
+
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT")
@@ -148,11 +156,6 @@ namespace Qurbanet.Migrations
 
                     b.Property<DateTime?>("EndTime")
                         .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasDefaultValue(false);
 
                     b.Property<int>("OrderNumber")
                         .HasColumnType("INTEGER");
@@ -185,6 +188,11 @@ namespace Qurbanet.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("Closed")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasDefaultValue(false);
+
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT")
@@ -195,11 +203,6 @@ namespace Qurbanet.Migrations
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasDefaultValue(false);
 
                     b.Property<bool>("IsPaid")
                         .HasColumnType("INTEGER");
@@ -241,6 +244,11 @@ namespace Qurbanet.Migrations
                     b.Property<decimal>("Amount")
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("Closed")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasDefaultValue(false);
+
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT")
@@ -248,11 +256,6 @@ namespace Qurbanet.Migrations
 
                     b.Property<int>("CreateUserId")
                         .HasColumnType("INTEGER");
-
-                    b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasDefaultValue(false);
 
                     b.Property<string>("Note")
                         .HasColumnType("TEXT");
@@ -290,6 +293,11 @@ namespace Qurbanet.Migrations
                     b.Property<int>("AnimalId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("Closed")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasDefaultValue(false);
+
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT")
@@ -300,11 +308,6 @@ namespace Qurbanet.Migrations
 
                     b.Property<int>("CustomerId")
                         .HasColumnType("INTEGER");
-
-                    b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasDefaultValue(false);
 
                     b.Property<string>("Notes")
                         .HasColumnType("TEXT");
@@ -343,6 +346,11 @@ namespace Qurbanet.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("Closed")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasDefaultValue(false);
+
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT")
@@ -361,11 +369,6 @@ namespace Qurbanet.Migrations
                     b.Property<string>("EntityType")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasDefaultValue(false);
 
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
@@ -391,6 +394,11 @@ namespace Qurbanet.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("Closed")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasDefaultValue(false);
+
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT")
@@ -402,11 +410,6 @@ namespace Qurbanet.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasDefaultValue(false);
 
                     b.Property<string>("Name")
                         .IsRequired()
