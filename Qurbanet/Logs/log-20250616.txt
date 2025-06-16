@@ -1,0 +1,246 @@
+2025-06-16 22:44:16.618 +03:00 [INF] User profile is available. Using 'C:\Users\kamil\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 22:44:16.690 +03:00 [INF] Creating key {85550715-10da-4e80-ad91-f15b9fe6fc91} with creation date 2025-06-16 19:44:16Z, activation date 2025-06-16 19:44:16Z, and expiration date 2025-09-14 19:44:16Z.
+2025-06-16 22:44:16.741 +03:00 [INF] Writing data to file 'C:\Users\kamil\AppData\Local\ASP.NET\DataProtection-Keys\key-85550715-10da-4e80-ad91-f15b9fe6fc91.xml'.
+2025-06-16 22:44:17.082 +03:00 [INF] Now listening on: https://localhost:7225
+2025-06-16 22:44:17.084 +03:00 [INF] Now listening on: http://localhost:5116
+2025-06-16 22:44:17.185 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 22:44:17.186 +03:00 [INF] Hosting environment: Development
+2025-06-16 22:44:17.187 +03:00 [INF] Content root path: C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet
+2025-06-16 22:48:12.542 +03:00 [INF] User profile is available. Using 'C:\Users\kamil\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 22:48:12.784 +03:00 [INF] Now listening on: https://localhost:7225
+2025-06-16 22:48:12.787 +03:00 [INF] Now listening on: http://localhost:5116
+2025-06-16 22:48:12.862 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 22:48:12.863 +03:00 [INF] Hosting environment: Development
+2025-06-16 22:48:12.864 +03:00 [INF] Content root path: C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet
+2025-06-16 22:50:22.339 +03:00 [INF] User profile is available. Using 'C:\Users\kamil\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 22:50:22.645 +03:00 [INF] Now listening on: https://localhost:7225
+2025-06-16 22:50:22.647 +03:00 [INF] Now listening on: http://localhost:5116
+2025-06-16 22:50:22.796 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 22:50:22.813 +03:00 [INF] Hosting environment: Development
+2025-06-16 22:50:22.814 +03:00 [INF] Content root path: C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet
+2025-06-16 22:51:52.926 +03:00 [INF] User profile is available. Using 'C:\Users\kamil\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 22:51:53.160 +03:00 [INF] Now listening on: https://localhost:7225
+2025-06-16 22:51:53.161 +03:00 [INF] Now listening on: http://localhost:5116
+2025-06-16 22:51:53.231 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 22:51:53.232 +03:00 [INF] Hosting environment: Development
+2025-06-16 22:51:53.233 +03:00 [INF] Content root path: C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet
+2025-06-16 22:52:02.276 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 22:52:02.433 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 22:52:02.490 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 22:52:02.507 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 22:52:02.653 +03:00 [INF] Executed ViewResult - view Index executed in 150.0404ms.
+2025-06-16 22:52:02.659 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 166.041ms
+2025-06-16 22:52:02.661 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 22:52:02.669 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 403.5615ms
+2025-06-16 22:52:02.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - null null
+2025-06-16 22:52:02.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-06-16 22:52:02.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/jquery/dist/jquery.min.js - null null
+2025-06-16 22:52:02.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - null null
+2025-06-16 22:52:02.713 +03:00 [INF] Sending file. Request path: '/Qurbanet.styles.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\obj\Debug\net8.0\scopedcss\bundle\Qurbanet.styles.css'
+2025-06-16 22:52:02.713 +03:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\css\site.css'
+2025-06-16 22:52:02.716 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - 200 1207 text/css 37.6069ms
+2025-06-16 22:52:02.718 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - 200 362 text/css 40.0633ms
+2025-06-16 22:52:02.730 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-06-16 22:52:02.731 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/css/bootstrap.min.css - 200 162726 text/css 53.3904ms
+2025-06-16 22:52:02.785 +03:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-06-16 22:52:02.786 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/jquery/dist/jquery.min.js - 200 89503 text/javascript 108.3838ms
+2025-06-16 22:52:02.833 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-06-16 22:52:02.834 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 22:52:02.833 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2025-06-16 22:52:02.834 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 22:52:02.840 +03:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\js\site.js'
+2025-06-16 22:52:02.843 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 231 text/javascript 9.6324ms
+2025-06-16 22:52:02.845 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 10.9784ms
+2025-06-16 22:52:02.886 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-06-16 22:52:02.887 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78474 text/javascript 53.7133ms
+2025-06-16 22:52:02.905 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.3381ms
+2025-06-16 22:52:03.055 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/favicon.ico - null null
+2025-06-16 22:52:03.074 +03:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\favicon.ico'
+2025-06-16 22:52:03.077 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/favicon.ico - 200 5430 image/x-icon 22.5884ms
+2025-06-16 22:52:47.596 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-16 22:52:47.613 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 22:52:47.627 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-16 22:52:49.318 +03:00 [ERR] Failed executing DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-16 22:52:49.377 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Qurbanet.Database.AppDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: o.IsDeleted'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: o.IsDeleted'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-06-16 22:52:49.536 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 1905.8558ms
+2025-06-16 22:52:49.537 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 22:52:49.558 +03:00 [ERR] An unexpected error occurred. SQLite Error 1: 'no such column: o.IsDeleted'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: o.IsDeleted'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Qurbanet.Database.Repositories.BaseRepository`1.GetAllAsync() in C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\Database\Repositories\BaseRepository.cs:line 21
+   at Qurbanet.Services.OrganizationService.GetAllAsync() in C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\Services\OrganizationService.cs:line 26
+   at Qurbanet.Controllers.OrganizationController.Index() in C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\Controllers\OrganizationController.cs:line 18
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Qurbanet.Middlewares.LoggingMiddleware.InvokeAsync(HttpContext context) in C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\Middlewares\LoggingMiddleware.cs:line 36
+2025-06-16 22:52:49.615 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 500 null text/html 2019.0403ms
+2025-06-16 22:52:49.639 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 22:52:49.639 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 22:52:49.642 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 4.1672ms
+2025-06-16 22:52:49.661 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.9617ms
+2025-06-16 22:57:27.113 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-06-16 22:57:27.172 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-06-16 22:57:27.184 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-06-16 19:57:27.1778437+00:00');
+SELECT changes();
+2025-06-16 22:57:27.245 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-06-16 22:57:27.253 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-06-16 22:57:27.258 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-16 22:57:27.274 +03:00 [INF] Applying migration '20250616195709_Closed_IsDeleted'.
+2025-06-16 22:57:27.295 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Users" RENAME COLUMN "Closed" TO "IsDeleted";
+2025-06-16 22:57:27.297 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "SystemLogs" RENAME COLUMN "Closed" TO "IsDeleted";
+2025-06-16 22:57:27.298 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Sales" RENAME COLUMN "Closed" TO "IsDeleted";
+2025-06-16 22:57:27.300 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Payments" RENAME COLUMN "Closed" TO "IsDeleted";
+2025-06-16 22:57:27.302 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Organizations" RENAME COLUMN "Closed" TO "IsDeleted";
+2025-06-16 22:57:27.304 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "CuttingEvents" RENAME COLUMN "Closed" TO "IsDeleted";
+2025-06-16 22:57:27.306 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Customers" RENAME COLUMN "Closed" TO "IsDeleted";
+2025-06-16 22:57:27.307 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Animals" RENAME COLUMN "Closed" TO "IsDeleted";
+2025-06-16 22:57:27.308 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250616195709_Closed_IsDeleted', '9.0.1');
+2025-06-16 22:57:27.315 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-06-16 22:57:53.179 +03:00 [INF] User profile is available. Using 'C:\Users\kamil\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 22:57:53.544 +03:00 [INF] Now listening on: https://localhost:7225
+2025-06-16 22:57:53.546 +03:00 [INF] Now listening on: http://localhost:5116
+2025-06-16 22:57:53.623 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 22:57:53.624 +03:00 [INF] Hosting environment: Development
+2025-06-16 22:57:53.626 +03:00 [INF] Content root path: C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet
+2025-06-16 22:57:54.260 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 22:57:54.414 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 22:57:54.455 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 22:57:54.471 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 22:57:54.615 +03:00 [INF] Executed ViewResult - view Index executed in 146.8761ms.
+2025-06-16 22:57:54.622 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 163.0792ms
+2025-06-16 22:57:54.625 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 22:57:54.627 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-06-16 22:57:54.634 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - null null
+2025-06-16 22:57:54.634 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - null null
+2025-06-16 22:57:54.634 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/jquery/dist/jquery.min.js - null null
+2025-06-16 22:57:54.636 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 385.5519ms
+2025-06-16 22:57:54.661 +03:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\css\site.css'
+2025-06-16 22:57:54.661 +03:00 [INF] Sending file. Request path: '/Qurbanet.styles.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\obj\Debug\net8.0\scopedcss\bundle\Qurbanet.styles.css'
+2025-06-16 22:57:54.664 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - 200 362 text/css 30.5437ms
+2025-06-16 22:57:54.667 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - 200 1207 text/css 32.6267ms
+2025-06-16 22:57:54.677 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-06-16 22:57:54.678 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/css/bootstrap.min.css - 200 162726 text/css 50.9766ms
+2025-06-16 22:57:54.751 +03:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-06-16 22:57:54.753 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/jquery/dist/jquery.min.js - 200 89503 text/javascript 118.7872ms
+2025-06-16 22:57:54.798 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 22:57:54.798 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-06-16 22:57:54.798 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2025-06-16 22:57:54.798 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 22:57:54.808 +03:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\js\site.js'
+2025-06-16 22:57:54.807 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.7111ms
+2025-06-16 22:57:54.812 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 231 text/javascript 14.3081ms
+2025-06-16 22:57:54.849 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-06-16 22:57:54.851 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78474 text/javascript 52.8844ms
+2025-06-16 22:57:54.876 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.4944ms
+2025-06-16 22:58:35.284 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-16 22:58:35.304 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 22:58:35.312 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-16 22:58:36.545 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-16 22:58:36.575 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 22:58:36.584 +03:00 [INF] Executed ViewResult - view Index executed in 9.7331ms.
+2025-06-16 22:58:36.586 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 1271.6913ms
+2025-06-16 22:58:36.587 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 22:58:36.597 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 200 null text/html; charset=utf-8 1316.0191ms
+2025-06-16 22:58:36.611 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 22:58:36.612 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 22:58:36.630 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 16.6893ms
+2025-06-16 22:58:36.641 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.6408ms
+2025-06-16 22:58:38.644 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization/Create - null null
+2025-06-16 22:58:38.652 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Create (Qurbanet)'
+2025-06-16 22:58:38.655 +03:00 [INF] Route matched with {action = "Create", controller = "Organization"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-16 22:58:38.660 +03:00 [INF] Executing ViewResult, running view Create.
+2025-06-16 22:58:38.712 +03:00 [INF] Executed ViewResult - view Create executed in 53.0277ms.
+2025-06-16 22:58:38.714 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Create (Qurbanet) in 56.1419ms
+2025-06-16 22:58:38.716 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Create (Qurbanet)'
+2025-06-16 22:58:38.718 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization/Create - 200 null text/html; charset=utf-8 73.9231ms
+2025-06-16 22:58:38.730 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 22:58:38.730 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 22:58:38.739 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 9.0955ms
+2025-06-16 22:58:38.744 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.6621ms
+2025-06-16 22:58:43.440 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 22:58:43.446 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 22:58:43.448 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 22:58:43.452 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 22:58:43.457 +03:00 [INF] Executed ViewResult - view Index executed in 4.9873ms.
+2025-06-16 22:58:43.460 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 7.8537ms
+2025-06-16 22:58:43.462 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 22:58:43.465 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 26.0131ms
+2025-06-16 22:58:43.493 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 22:58:43.495 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 22:58:43.509 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 14.8408ms
+2025-06-16 22:58:43.519 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.2887ms
