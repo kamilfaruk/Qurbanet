@@ -6,7 +6,7 @@
 <h1>Animals</h1>
 <a asp-action="Create" asp-route-organizationId="@organizationId" class="btn btn-success mb-2">Add Animal</a>
 <table class="table">
-    <thead><tr><th>Name</th><th>Species</th><th>Status</th></tr></thead>
+    <thead><tr><th>Name</th><th>Species</th><th>Status</th><th></th></tr></thead>
     <tbody>
 @foreach (var item in Model)
 {
@@ -14,6 +14,10 @@
             <td>@item.NameOrTag</td>
             <td>@item.Species</td>
             <td>@item.Status</td>
+            <td>
+                <a asp-controller="Sale" asp-action="Create" asp-route-animalId="@item.Id" class="btn btn-sm btn-primary">Sell</a>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-secondary">Details</a>
+            </td>
         </tr>
 }
     </tbody>

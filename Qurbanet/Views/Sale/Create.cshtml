@@ -6,7 +6,7 @@
 <form asp-action="Create" method="post">
     <div class="mb-3">
         <label asp-for="AnimalId" class="form-label"></label>
-        <input asp-for="AnimalId" class="form-control" />
+        <input asp-for="AnimalId" class="form-control" @(Model.AnimalId > 0 ? "readonly" : "") />
         <span asp-validation-for="AnimalId" class="text-danger"></span>
     </div>
     <div class="mb-3">

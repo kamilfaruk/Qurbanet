@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Qurbanet.Models.DTOs.Organization;
+using Qurbanet.Models.ViewModels;
 using Qurbanet.Services.Interfaces;
 using Qurbanet.Models.Enums;
 
@@ -32,7 +33,13 @@ namespace Qurbanet.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var org = await _service.GetByIdAsync(id);
-            return View(org);
+            var summary = await _service.GetFinancialSummaryAsync(id);
+            var vm = new OrganizationDetailsViewModel
+            {
+                Organization = org,
+                Summary = summary
+            };
+            return View(vm);
         }
 
         [HttpGet]

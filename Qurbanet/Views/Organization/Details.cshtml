@@ -1,25 +1,42 @@
-@model Qurbanet.Models.DTOs.Organization.OrganizationDetailsDto
+@model Qurbanet.Models.ViewModels.OrganizationDetailsViewModel
 @{
     ViewData["Title"] = "Organization Details";
 }
-<h1>@Model.Name</h1>
-<p>Year: @Model.Year</p>
-<p>Paid: @Model.IsPaid</p>
-<p>Start: @Model.StartDate.ToShortDateString()</p>
-<p>End: @Model.EndDate.ToShortDateString()</p>
+<h1>@Model.Organization.Name</h1>
+<p>Year: @Model.Organization.Year</p>
+<p>Paid: @Model.Organization.IsPaid</p>
+<p>Start: @Model.Organization.StartDate.ToShortDateString()</p>
+<p>End: @Model.Organization.EndDate.ToShortDateString()</p>
+
+<div class="card mb-3">
+    <div class="card-header">
+        Finansal Özet
+    </div>
+    <div class="card-body">
+        <p>Toplam Hayvan: @Model.Summary.TotalAnimals</p>
+        <p>Satılan Hayvan: @Model.Summary.SoldAnimals</p>
+        <p>Toplam Tutar: @Model.Summary.TotalDue</p>
+        <p>Alınan Ödeme: @Model.Summary.TotalPaid</p>
+        <p>Kalan: @Model.Summary.RemainingAmount</p>
+    </div>
+</div>
 <h2>Animals</h2>
-<a asp-controller="Animal" asp-action="Create" asp-route-organizationId="@Model.Id" class="btn btn-success mb-2">Add Animal</a>
+<a asp-controller="Animal" asp-action="Create" asp-route-organizationId="@Model.Organization.Id" class="btn btn-success mb-2">Add Animal</a>
 <table class="table">
     <thead>
-        <tr><th>Name</th><th>Species</th><th>Status</th></tr>
+        <tr><th>Name</th><th>Species</th><th>Status</th><th></th></tr>
     </thead>
     <tbody>
-    @foreach (var a in Model.Animals)
+    @foreach (var a in Model.Organization.Animals)
     {
         <tr>
             <td>@a.NameOrTag</td>
             <td>@a.Species</td>
             <td>@a.Status</td>
+            <td>
+                <a asp-controller="Sale" asp-action="Create" asp-route-animalId="@a.Id" class="btn btn-sm btn-primary">Sell</a>
+                <a asp-controller="Animal" asp-action="Details" asp-route-id="@a.Id" class="btn btn-sm btn-secondary">Details</a>
+            </td>
         </tr>
     }
     </tbody>
