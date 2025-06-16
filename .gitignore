@@ -6,6 +6,8 @@
 
 # Ignore Visual Studio files
 /.vs
+*.db-shm
+*.db-wal
 *.orig
 *.obj
 *.pdb
