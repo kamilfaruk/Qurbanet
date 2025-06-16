@@ -1,0 +1,1189 @@
+2025-06-17 00:40:07.574 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-06-17 00:40:07.631 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-17 00:40:48.687 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-06-17 00:40:48.749 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-06-17 00:40:48.761 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-06-16 21:40:48.7539827+00:00');
+SELECT changes();
+2025-06-17 00:40:48.816 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-06-17 00:40:48.824 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-06-17 00:40:48.827 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-17 00:40:48.839 +03:00 [INF] Applying migration '20250616214039_CuttingEvents_Stage'.
+2025-06-17 00:40:48.875 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_CuttingEvents" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_CuttingEvents" PRIMARY KEY AUTOINCREMENT,
+    "AnimalId" INTEGER NOT NULL,
+    "CreateDate" TEXT NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+    "CreateUserId" INTEGER NOT NULL,
+    "EndTime" TEXT NULL,
+    "IsDeleted" INTEGER NOT NULL DEFAULT 0,
+    "OrderNumber" INTEGER NOT NULL,
+    "Stage" INTEGER NOT NULL,
+    "StartTime" TEXT NULL,
+    "UpdateDate" TEXT NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+    "UpdateUserId" INTEGER NOT NULL,
+    CONSTRAINT "FK_CuttingEvents_Animals_AnimalId" FOREIGN KEY ("AnimalId") REFERENCES "Animals" ("Id") ON DELETE CASCADE
+);
+2025-06-17 00:40:48.875 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_CuttingEvents" ("Id", "AnimalId", "CreateDate", "CreateUserId", "EndTime", "IsDeleted", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+SELECT "Id", "AnimalId", "CreateDate", "CreateUserId", "EndTime", "IsDeleted", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId"
+FROM "CuttingEvents";
+2025-06-17 00:40:48.878 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 0;
+2025-06-17 00:40:48.879 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "CuttingEvents";
+2025-06-17 00:40:48.881 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_CuttingEvents" RENAME TO "CuttingEvents";
+2025-06-17 00:40:48.888 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 1;
+2025-06-17 00:40:48.889 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_CuttingEvents_AnimalId" ON "CuttingEvents" ("AnimalId");
+2025-06-17 00:40:48.894 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250616214039_CuttingEvents_Stage', '9.0.1');
+2025-06-17 00:40:48.897 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-06-17 00:40:58.347 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-06-17 00:40:58.433 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-06-17 00:40:58.450 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-06-16 21:40:58.4434131+00:00');
+SELECT changes();
+2025-06-17 00:40:58.533 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-06-17 00:40:58.553 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-06-17 00:40:58.562 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-17 00:40:58.578 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-06-17 00:40:58.584 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-06-17 00:40:58.858 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Organizations" AS "o")
+2025-06-17 00:40:58.866 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Users" AS "u")
+2025-06-17 00:40:58.948 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreateDate", "u"."CreateUserId", "u"."Email", "u"."IsDeleted", "u"."Name", "u"."Password", "u"."Phone", "u"."Surname", "u"."UpdateDate", "u"."UpdateUserId", "u"."UserType", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."UserType" = 2
+LIMIT 1
+2025-06-17 00:40:59.232 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = Boolean), @p4='?' (Size = 17), @p5='?' (DbType = DateTime), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Organizations" ("CreateDate", "CreateUserId", "EndDate", "IsPaid", "Name", "StartDate", "UpdateDate", "UpdateUserId", "UserId", "Year")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.317 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 6), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 4), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.324 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 4), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 9), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.328 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 6), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 9), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.332 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 4), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 9), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.335 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 6), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 9), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.339 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 4), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 4), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.344 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 6), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 4), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.348 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 4), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 9), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.352 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 6), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 4), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.356 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 4), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 9), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.360 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 6), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 4), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.364 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 4), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 9), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.369 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 6), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 4), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.373 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 4), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 9), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.377 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 6), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 9), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.381 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 4), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 4), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.385 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 6), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 4), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.389 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 4), @p4='?' (Size = 4), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (Size = 4), @p10='?' (DbType = DateTime), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Animals" ("Breed", "CreateDate", "CreateUserId", "Gender", "NameOrTag", "Notes", "OrganizationId", "Price", "Species", "Status", "UpdateDate", "UpdateUserId", "WeightKg")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.431 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (Size = 21), @p3='?' (Size = 12), @p4='?', @p5='?' (Size = 10), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Customers" ("CreateDate", "CreateUserId", "Email", "FullName", "Notes", "PhoneNumber", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.475 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Decimal), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Sales" ("AmountPaid", "AnimalId", "CreateDate", "CreateUserId", "CustomerId", "Notes", "SaleDate", "SalePrice", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.508 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Payments" ("Amount", "CreateDate", "CreateUserId", "Note", "PaymentDate", "SaleId", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.519 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (Size = 21), @p3='?' (Size = 12), @p4='?', @p5='?' (Size = 10), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Customers" ("CreateDate", "CreateUserId", "Email", "FullName", "Notes", "PhoneNumber", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.527 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Decimal), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Sales" ("AmountPaid", "AnimalId", "CreateDate", "CreateUserId", "CustomerId", "Notes", "SaleDate", "SalePrice", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.535 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Payments" ("Amount", "CreateDate", "CreateUserId", "Note", "PaymentDate", "SaleId", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.542 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (Size = 21), @p3='?' (Size = 12), @p4='?', @p5='?' (Size = 10), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Customers" ("CreateDate", "CreateUserId", "Email", "FullName", "Notes", "PhoneNumber", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.549 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Decimal), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Sales" ("AmountPaid", "AnimalId", "CreateDate", "CreateUserId", "CustomerId", "Notes", "SaleDate", "SalePrice", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.555 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Payments" ("Amount", "CreateDate", "CreateUserId", "Note", "PaymentDate", "SaleId", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.563 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (Size = 21), @p3='?' (Size = 12), @p4='?', @p5='?' (Size = 10), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Customers" ("CreateDate", "CreateUserId", "Email", "FullName", "Notes", "PhoneNumber", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.570 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Decimal), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Sales" ("AmountPaid", "AnimalId", "CreateDate", "CreateUserId", "CustomerId", "Notes", "SaleDate", "SalePrice", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.577 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Payments" ("Amount", "CreateDate", "CreateUserId", "Note", "PaymentDate", "SaleId", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.584 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (Size = 21), @p3='?' (Size = 12), @p4='?', @p5='?' (Size = 10), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Customers" ("CreateDate", "CreateUserId", "Email", "FullName", "Notes", "PhoneNumber", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.590 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Decimal), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Sales" ("AmountPaid", "AnimalId", "CreateDate", "CreateUserId", "CustomerId", "Notes", "SaleDate", "SalePrice", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.597 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Payments" ("Amount", "CreateDate", "CreateUserId", "Note", "PaymentDate", "SaleId", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.603 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (Size = 21), @p3='?' (Size = 12), @p4='?', @p5='?' (Size = 10), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Customers" ("CreateDate", "CreateUserId", "Email", "FullName", "Notes", "PhoneNumber", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.610 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Decimal), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Sales" ("AmountPaid", "AnimalId", "CreateDate", "CreateUserId", "CustomerId", "Notes", "SaleDate", "SalePrice", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.617 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Payments" ("Amount", "CreateDate", "CreateUserId", "Note", "PaymentDate", "SaleId", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.643 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (Size = 21), @p3='?' (Size = 12), @p4='?', @p5='?' (Size = 10), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Customers" ("CreateDate", "CreateUserId", "Email", "FullName", "Notes", "PhoneNumber", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.653 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Decimal), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Sales" ("AmountPaid", "AnimalId", "CreateDate", "CreateUserId", "CustomerId", "Notes", "SaleDate", "SalePrice", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.662 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Payments" ("Amount", "CreateDate", "CreateUserId", "Note", "PaymentDate", "SaleId", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.670 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (Size = 21), @p3='?' (Size = 12), @p4='?', @p5='?' (Size = 10), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Customers" ("CreateDate", "CreateUserId", "Email", "FullName", "Notes", "PhoneNumber", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.680 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Decimal), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Sales" ("AmountPaid", "AnimalId", "CreateDate", "CreateUserId", "CustomerId", "Notes", "SaleDate", "SalePrice", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.688 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Payments" ("Amount", "CreateDate", "CreateUserId", "Note", "PaymentDate", "SaleId", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.697 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (Size = 21), @p3='?' (Size = 12), @p4='?', @p5='?' (Size = 10), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Customers" ("CreateDate", "CreateUserId", "Email", "FullName", "Notes", "PhoneNumber", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.706 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Decimal), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Sales" ("AmountPaid", "AnimalId", "CreateDate", "CreateUserId", "CustomerId", "Notes", "SaleDate", "SalePrice", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.714 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Payments" ("Amount", "CreateDate", "CreateUserId", "Note", "PaymentDate", "SaleId", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.765 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.770 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.773 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.776 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.780 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.783 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.787 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.792 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.796 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.799 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.802 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.806 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.810 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.814 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.817 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.821 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.825 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:40:59.827 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CuttingEvents" ("AnimalId", "CreateDate", "CreateUserId", "EndTime", "OrderNumber", "Stage", "StartTime", "UpdateDate", "UpdateUserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id", "IsDeleted";
+2025-06-17 00:41:00.001 +03:00 [INF] User profile is available. Using 'C:\Users\kamil\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-17 00:41:00.221 +03:00 [INF] Now listening on: https://localhost:7225
+2025-06-17 00:41:00.222 +03:00 [INF] Now listening on: http://localhost:5116
+2025-06-17 00:41:00.299 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-17 00:41:00.301 +03:00 [INF] Hosting environment: Development
+2025-06-17 00:41:00.302 +03:00 [INF] Content root path: C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet
+2025-06-17 00:41:00.818 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:41:00.982 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-06-17 00:41:00.999 +03:00 [INF] AuthenticationScheme: Cookies was challenged.
+2025-06-17 00:41:01.006 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 302 0 null 200.7624ms
+2025-06-17 00:41:01.014 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/Login?ReturnUrl=%2F - null null
+2025-06-17 00:41:01.025 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-17 00:41:01.040 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-17 00:41:01.180 +03:00 [INF] Executing ViewResult, running view Login.
+2025-06-17 00:41:01.293 +03:00 [INF] Executed ViewResult - view Login executed in 115.3099ms.
+2025-06-17 00:41:01.300 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Login (Qurbanet) in 256.0758ms
+2025-06-17 00:41:01.303 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-17 00:41:01.314 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:01.314 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - null null
+2025-06-17 00:41:01.315 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/Login?ReturnUrl=%2F - 200 null text/html; charset=utf-8 300.8463ms
+2025-06-17 00:41:01.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 23.1217ms
+2025-06-17 00:41:01.339 +03:00 [INF] The file /Qurbanet.styles.css was not modified
+2025-06-17 00:41:01.344 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - 304 null text/css 30.0715ms
+2025-06-17 00:41:01.480 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:41:01.547 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.7536ms
+2025-06-17 00:41:09.004 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/Account/Login - application/x-www-form-urlencoded 208
+2025-06-17 00:41:09.015 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-17 00:41:09.035 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-17 00:41:09.127 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__username_0='?' (Size = 3), @__password_1='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreateDate", "u"."CreateUserId", "u"."Email", "u"."IsDeleted", "u"."Name", "u"."Password", "u"."Phone", "u"."Surname", "u"."UpdateDate", "u"."UpdateUserId", "u"."UserType", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__username_0 AND "u"."Password" = @__password_1
+2025-06-17 00:41:09.138 +03:00 [INF] AuthenticationScheme: Cookies signed in.
+2025-06-17 00:41:09.141 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-17 00:41:09.143 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Login (Qurbanet) in 104.7517ms
+2025-06-17 00:41:09.145 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-17 00:41:09.146 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/Account/Login - 302 0 null 141.7592ms
+2025-06-17 00:41:09.150 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:41:09.159 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:41:09.162 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:41:09.167 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:41:09.179 +03:00 [INF] Executed ViewResult - view Index executed in 13.9564ms.
+2025-06-17 00:41:09.182 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 17.2715ms
+2025-06-17 00:41:09.184 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:41:09.186 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 35.7773ms
+2025-06-17 00:41:09.204 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:41:09.205 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:09.217 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 12.4628ms
+2025-06-17 00:41:09.233 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.5327ms
+2025-06-17 00:41:11.400 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-17 00:41:11.409 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:41:11.416 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-17 00:41:11.494 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-17 00:41:11.532 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:41:11.544 +03:00 [INF] Executed ViewResult - view Index executed in 28.6549ms.
+2025-06-17 00:41:11.547 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 126.7359ms
+2025-06-17 00:41:11.549 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:41:11.552 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 200 null text/html; charset=utf-8 151.9644ms
+2025-06-17 00:41:11.572 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:41:11.572 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:11.582 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 10.2055ms
+2025-06-17 00:41:11.586 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.3419ms
+2025-06-17 00:41:14.600 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization/Details/1 - null null
+2025-06-17 00:41:14.606 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Details (Qurbanet)'
+2025-06-17 00:41:14.612 +03:00 [INF] Route matched with {action = "Details", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(Int32) on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-17 00:41:14.651 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+WHERE "o"."Id" = @__p_0
+LIMIT 1
+2025-06-17 00:41:14.660 +03:00 [INF] Executing ViewResult, running view Details.
+2025-06-17 00:41:14.673 +03:00 [INF] Executed ViewResult - view Details executed in 13.256ms.
+2025-06-17 00:41:14.676 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Details (Qurbanet) in 60.2522ms
+2025-06-17 00:41:14.677 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Details (Qurbanet)'
+2025-06-17 00:41:14.679 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization/Details/1 - 200 null text/html; charset=utf-8 79.2894ms
+2025-06-17 00:41:14.692 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:41:14.696 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:14.706 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 9.7863ms
+2025-06-17 00:41:14.709 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.804ms
+2025-06-17 00:41:18.365 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Animal/Create?organizationId=1 - null null
+2025-06-17 00:41:18.374 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Organizer|Admin)
+2025-06-17 00:41:18.383 +03:00 [INF] AuthenticationScheme: Cookies was forbidden.
+2025-06-17 00:41:18.385 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Animal/Create?organizationId=1 - 302 0 null 19.887ms
+2025-06-17 00:41:18.389 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/AccessDenied?ReturnUrl=%2FAnimal%2FCreate%3ForganizationId%3D1 - null null
+2025-06-17 00:41:18.394 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.AccessDenied (Qurbanet)'
+2025-06-17 00:41:18.396 +03:00 [INF] Route matched with {action = "AccessDenied", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AccessDenied() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-17 00:41:18.402 +03:00 [INF] Executing ViewResult, running view AccessDenied.
+2025-06-17 00:41:18.409 +03:00 [INF] Executed ViewResult - view AccessDenied executed in 8.0498ms.
+2025-06-17 00:41:18.412 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.AccessDenied (Qurbanet) in 13.3723ms
+2025-06-17 00:41:18.413 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.AccessDenied (Qurbanet)'
+2025-06-17 00:41:18.415 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/AccessDenied?ReturnUrl=%2FAnimal%2FCreate%3ForganizationId%3D1 - 200 null text/html; charset=utf-8 26.0255ms
+2025-06-17 00:41:18.436 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:41:18.437 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:18.446 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 9.8768ms
+2025-06-17 00:41:18.450 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.0836ms
+2025-06-17 00:41:20.871 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:41:20.878 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:41:20.880 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:41:20.883 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:41:20.886 +03:00 [INF] Executed ViewResult - view Index executed in 3.6633ms.
+2025-06-17 00:41:20.890 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 6.9586ms
+2025-06-17 00:41:20.892 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:41:20.894 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 22.5947ms
+2025-06-17 00:41:20.915 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:20.915 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:41:20.919 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 4.5933ms
+2025-06-17 00:41:20.929 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.3207ms
+2025-06-17 00:41:23.224 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-17 00:41:23.230 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:41:23.232 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-17 00:41:23.240 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-17 00:41:23.244 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:41:23.248 +03:00 [INF] Executed ViewResult - view Index executed in 3.9005ms.
+2025-06-17 00:41:23.250 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 14.641ms
+2025-06-17 00:41:23.251 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:41:23.253 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 200 null text/html; charset=utf-8 28.4635ms
+2025-06-17 00:41:23.267 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:23.267 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:41:23.272 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 4.7657ms
+2025-06-17 00:41:23.283 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.8465ms
+2025-06-17 00:41:26.255 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:26.259 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 4.7686ms
+2025-06-17 00:41:27.560 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Customer - null null
+2025-06-17 00:41:27.566 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.CustomerController.Index (Qurbanet)'
+2025-06-17 00:41:27.572 +03:00 [INF] Route matched with {action = "Index", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.CustomerController (Qurbanet).
+2025-06-17 00:41:27.584 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."CreateDate", "c"."CreateUserId", "c"."Email", "c"."FullName", "c"."IsDeleted", "c"."Notes", "c"."PhoneNumber", "c"."UpdateDate", "c"."UpdateUserId"
+FROM "Customers" AS "c"
+2025-06-17 00:41:27.596 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:41:27.605 +03:00 [INF] Executed ViewResult - view Index executed in 10.102ms.
+2025-06-17 00:41:27.607 +03:00 [INF] Executed action Qurbanet.Controllers.CustomerController.Index (Qurbanet) in 32.3673ms
+2025-06-17 00:41:27.609 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.CustomerController.Index (Qurbanet)'
+2025-06-17 00:41:27.610 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Customer - 200 null text/html; charset=utf-8 49.9691ms
+2025-06-17 00:41:27.626 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:41:27.627 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:27.635 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 7.7575ms
+2025-06-17 00:41:27.638 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.6701ms
+2025-06-17 00:41:28.497 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Sale - null null
+2025-06-17 00:41:28.504 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.SaleController.Index (Qurbanet)'
+2025-06-17 00:41:28.508 +03:00 [INF] Route matched with {action = "Index", controller = "Sale"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.SaleController (Qurbanet).
+2025-06-17 00:41:28.522 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."AmountPaid", "s"."AnimalId", "s"."CreateDate", "s"."CreateUserId", "s"."CustomerId", "s"."IsDeleted", "s"."Notes", "s"."SaleDate", "s"."SalePrice", "s"."UpdateDate", "s"."UpdateUserId"
+FROM "Sales" AS "s"
+2025-06-17 00:41:28.533 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:41:28.543 +03:00 [INF] Executed ViewResult - view Index executed in 10.9826ms.
+2025-06-17 00:41:28.545 +03:00 [INF] Executed action Qurbanet.Controllers.SaleController.Index (Qurbanet) in 33.9604ms
+2025-06-17 00:41:28.547 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.SaleController.Index (Qurbanet)'
+2025-06-17 00:41:28.549 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Sale - 200 null text/html; charset=utf-8 52.6915ms
+2025-06-17 00:41:28.568 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:41:28.569 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:28.580 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 10.9156ms
+2025-06-17 00:41:28.585 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.3668ms
+2025-06-17 00:41:29.825 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Customer - null null
+2025-06-17 00:41:29.831 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.CustomerController.Index (Qurbanet)'
+2025-06-17 00:41:29.833 +03:00 [INF] Route matched with {action = "Index", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.CustomerController (Qurbanet).
+2025-06-17 00:41:29.838 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."CreateDate", "c"."CreateUserId", "c"."Email", "c"."FullName", "c"."IsDeleted", "c"."Notes", "c"."PhoneNumber", "c"."UpdateDate", "c"."UpdateUserId"
+FROM "Customers" AS "c"
+2025-06-17 00:41:29.842 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:41:29.845 +03:00 [INF] Executed ViewResult - view Index executed in 3.6993ms.
+2025-06-17 00:41:29.848 +03:00 [INF] Executed action Qurbanet.Controllers.CustomerController.Index (Qurbanet) in 11.8893ms
+2025-06-17 00:41:29.850 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.CustomerController.Index (Qurbanet)'
+2025-06-17 00:41:29.851 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Customer - 200 null text/html; charset=utf-8 26.5261ms
+2025-06-17 00:41:29.871 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:41:29.871 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:29.879 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 7.8209ms
+2025-06-17 00:41:29.883 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.6274ms
+2025-06-17 00:41:34.275 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Sale - null null
+2025-06-17 00:41:34.280 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.SaleController.Index (Qurbanet)'
+2025-06-17 00:41:34.282 +03:00 [INF] Route matched with {action = "Index", controller = "Sale"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.SaleController (Qurbanet).
+2025-06-17 00:41:34.287 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."AmountPaid", "s"."AnimalId", "s"."CreateDate", "s"."CreateUserId", "s"."CustomerId", "s"."IsDeleted", "s"."Notes", "s"."SaleDate", "s"."SalePrice", "s"."UpdateDate", "s"."UpdateUserId"
+FROM "Sales" AS "s"
+2025-06-17 00:41:34.290 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:41:34.293 +03:00 [INF] Executed ViewResult - view Index executed in 3.0423ms.
+2025-06-17 00:41:34.295 +03:00 [INF] Executed action Qurbanet.Controllers.SaleController.Index (Qurbanet) in 9.5664ms
+2025-06-17 00:41:34.297 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.SaleController.Index (Qurbanet)'
+2025-06-17 00:41:34.299 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Sale - 200 null text/html; charset=utf-8 23.6251ms
+2025-06-17 00:41:34.318 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:41:34.319 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:34.329 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 11.8174ms
+2025-06-17 00:41:34.343 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.9311ms
+2025-06-17 00:41:38.572 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:41:38.576 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:41:38.577 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:41:38.580 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:41:38.584 +03:00 [INF] Executed ViewResult - view Index executed in 4.4677ms.
+2025-06-17 00:41:38.586 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 6.8425ms
+2025-06-17 00:41:38.588 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:41:38.590 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 17.5935ms
+2025-06-17 00:41:38.626 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:41:38.629 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:38.637 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 7.7814ms
+2025-06-17 00:41:38.642 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.0207ms
+2025-06-17 00:41:39.479 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-17 00:41:39.486 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:41:39.488 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-17 00:41:39.491 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-17 00:41:39.495 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:41:39.498 +03:00 [INF] Executed ViewResult - view Index executed in 3.5729ms.
+2025-06-17 00:41:39.501 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 10.6566ms
+2025-06-17 00:41:39.504 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:41:39.506 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 200 null text/html; charset=utf-8 26.8374ms
+2025-06-17 00:41:39.529 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:41:39.529 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:41:39.536 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 6.9844ms
+2025-06-17 00:41:39.545 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.354ms
+2025-06-17 00:42:08.340 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization/Progress/1 - null null
+2025-06-17 00:42:08.349 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Progress (Qurbanet)'
+2025-06-17 00:42:08.355 +03:00 [INF] Route matched with {action = "Progress", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Progress(Int32) on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-17 00:42:13.796 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AnimalId", "c"."CreateDate", "c"."CreateUserId", "c"."EndTime", "c"."IsDeleted", "c"."OrderNumber", "c"."Stage", "c"."StartTime", "c"."UpdateDate", "c"."UpdateUserId"
+FROM "CuttingEvents" AS "c"
+INNER JOIN "Animals" AS "a" ON "c"."AnimalId" = "a"."Id"
+WHERE "a"."OrganizationId" = @__id_0
+2025-06-17 00:42:20.561 +03:00 [INF] Executing ViewResult, running view Progress.
+2025-06-17 00:42:20.568 +03:00 [INF] Executed ViewResult - view Progress executed in 7.6758ms.
+2025-06-17 00:42:20.571 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Progress (Qurbanet) in 12212.4292ms
+2025-06-17 00:42:20.573 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Progress (Qurbanet)'
+2025-06-17 00:42:20.575 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization/Progress/1 - 200 null text/html; charset=utf-8 12235.2564ms
+2025-06-17 00:42:20.594 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:42:20.595 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:42:20.603 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.8993ms
+2025-06-17 00:42:20.606 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.5321ms
+2025-06-17 00:42:35.035 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:42:35.041 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:42:35.043 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:42:35.048 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:42:35.051 +03:00 [INF] Executed ViewResult - view Index executed in 3.6307ms.
+2025-06-17 00:42:35.057 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 8.8379ms
+2025-06-17 00:42:35.059 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:42:35.062 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 26.8043ms
+2025-06-17 00:42:35.083 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:42:35.083 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:42:35.087 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 4.8181ms
+2025-06-17 00:42:35.107 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.339ms
+2025-06-17 00:42:36.450 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Home/Guide - null null
+2025-06-17 00:42:36.460 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Guide (Qurbanet)'
+2025-06-17 00:42:36.467 +03:00 [INF] Route matched with {action = "Guide", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Guide() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:42:36.473 +03:00 [INF] Executing ViewResult, running view Guide.
+2025-06-17 00:42:36.480 +03:00 [INF] Executed ViewResult - view Guide executed in 8.2322ms.
+2025-06-17 00:42:36.482 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Guide (Qurbanet) in 11.1224ms
+2025-06-17 00:42:36.484 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Guide (Qurbanet)'
+2025-06-17 00:42:36.486 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Home/Guide - 200 null text/html; charset=utf-8 36.2776ms
+2025-06-17 00:42:36.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:42:36.505 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:42:36.513 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 7.8835ms
+2025-06-17 00:42:36.526 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.3252ms
+2025-06-17 00:43:05.773 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:43:05.784 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:43:05.785 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:43:05.787 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:43:05.790 +03:00 [INF] Executed ViewResult - view Index executed in 2.9641ms.
+2025-06-17 00:43:05.793 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 5.4234ms
+2025-06-17 00:43:05.794 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:43:05.795 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 21.9754ms
+2025-06-17 00:43:05.812 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:43:05.812 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:43:05.821 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 9.8871ms
+2025-06-17 00:43:05.830 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.6638ms
+2025-06-17 00:43:17.359 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Customer - null null
+2025-06-17 00:43:17.366 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.CustomerController.Index (Qurbanet)'
+2025-06-17 00:43:17.368 +03:00 [INF] Route matched with {action = "Index", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.CustomerController (Qurbanet).
+2025-06-17 00:43:17.374 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."CreateDate", "c"."CreateUserId", "c"."Email", "c"."FullName", "c"."IsDeleted", "c"."Notes", "c"."PhoneNumber", "c"."UpdateDate", "c"."UpdateUserId"
+FROM "Customers" AS "c"
+2025-06-17 00:43:17.378 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:43:17.382 +03:00 [INF] Executed ViewResult - view Index executed in 4.045ms.
+2025-06-17 00:43:17.385 +03:00 [INF] Executed action Qurbanet.Controllers.CustomerController.Index (Qurbanet) in 13.7916ms
+2025-06-17 00:43:17.387 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.CustomerController.Index (Qurbanet)'
+2025-06-17 00:43:17.389 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Customer - 200 null text/html; charset=utf-8 29.8833ms
+2025-06-17 00:43:17.417 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:43:17.419 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:43:17.426 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 6.7093ms
+2025-06-17 00:43:17.431 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.9052ms
+2025-06-17 00:43:20.350 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:43:20.355 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:43:20.357 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:43:20.359 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:43:20.362 +03:00 [INF] Executed ViewResult - view Index executed in 3.1916ms.
+2025-06-17 00:43:20.365 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 6.0298ms
+2025-06-17 00:43:20.366 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:43:20.368 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 17.9975ms
+2025-06-17 00:43:20.390 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:43:20.390 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:43:20.394 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 4.7095ms
+2025-06-17 00:43:20.405 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.0705ms
+2025-06-17 00:43:22.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-17 00:43:22.797 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:43:22.799 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-17 00:43:22.802 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-17 00:43:22.805 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:43:22.807 +03:00 [INF] Executed ViewResult - view Index executed in 2.252ms.
+2025-06-17 00:43:22.810 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 8.3233ms
+2025-06-17 00:43:22.811 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:43:22.815 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 200 null text/html; charset=utf-8 22.3683ms
+2025-06-17 00:43:22.829 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:43:22.830 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:43:22.833 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 4.1928ms
+2025-06-17 00:43:22.846 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.4137ms
+2025-06-17 00:43:25.068 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:43:25.073 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:43:25.074 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:43:25.077 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:43:25.080 +03:00 [INF] Executed ViewResult - view Index executed in 3.5037ms.
+2025-06-17 00:43:25.082 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 5.5963ms
+2025-06-17 00:43:25.084 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:43:25.086 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 17.4531ms
+2025-06-17 00:43:25.106 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:43:25.108 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:43:25.117 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 9.383ms
+2025-06-17 00:43:25.122 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.9687ms
+2025-06-17 00:43:30.839 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-17 00:43:30.844 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:43:30.847 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-17 00:43:30.851 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-17 00:43:30.856 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:43:30.862 +03:00 [INF] Executed ViewResult - view Index executed in 6.1741ms.
+2025-06-17 00:43:30.874 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 23.6209ms
+2025-06-17 00:43:30.877 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:43:30.880 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 200 null text/html; charset=utf-8 41.3746ms
+2025-06-17 00:43:30.893 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:43:30.895 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:43:30.902 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 6.6621ms
+2025-06-17 00:43:30.906 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.5129ms
+2025-06-17 00:43:35.183 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:43:35.190 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:43:35.193 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:43:35.195 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:43:35.198 +03:00 [INF] Executed ViewResult - view Index executed in 2.696ms.
+2025-06-17 00:43:35.200 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 5.0998ms
+2025-06-17 00:43:35.202 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:43:35.204 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 21.0727ms
+2025-06-17 00:43:35.225 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:43:35.226 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:43:35.235 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.899ms
+2025-06-17 00:43:35.239 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.2247ms
+2025-06-17 00:43:41.588 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-17 00:43:41.595 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:43:41.597 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-17 00:43:41.600 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-17 00:43:41.602 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:43:41.604 +03:00 [INF] Executed ViewResult - view Index executed in 2.2511ms.
+2025-06-17 00:43:41.607 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 8.4512ms
+2025-06-17 00:43:41.610 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:43:41.612 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 200 null text/html; charset=utf-8 24.0977ms
+2025-06-17 00:43:41.629 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:43:41.629 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:43:41.637 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 7.7535ms
+2025-06-17 00:43:41.642 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.3517ms
+2025-06-17 00:43:47.417 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Sale - null null
+2025-06-17 00:43:47.423 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.SaleController.Index (Qurbanet)'
+2025-06-17 00:43:47.426 +03:00 [INF] Route matched with {action = "Index", controller = "Sale"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.SaleController (Qurbanet).
+2025-06-17 00:43:47.433 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."AmountPaid", "s"."AnimalId", "s"."CreateDate", "s"."CreateUserId", "s"."CustomerId", "s"."IsDeleted", "s"."Notes", "s"."SaleDate", "s"."SalePrice", "s"."UpdateDate", "s"."UpdateUserId"
+FROM "Sales" AS "s"
+2025-06-17 00:43:47.439 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:43:47.449 +03:00 [INF] Executed ViewResult - view Index executed in 9.5555ms.
+2025-06-17 00:43:47.454 +03:00 [INF] Executed action Qurbanet.Controllers.SaleController.Index (Qurbanet) in 23.4296ms
+2025-06-17 00:43:47.456 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.SaleController.Index (Qurbanet)'
+2025-06-17 00:43:47.458 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Sale - 200 null text/html; charset=utf-8 41.025ms
+2025-06-17 00:43:47.475 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:43:47.475 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:43:47.483 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 7.7212ms
+2025-06-17 00:43:47.492 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.9489ms
+2025-06-17 00:43:55.647 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:43:55.653 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:43:55.655 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:43:55.658 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:43:55.661 +03:00 [INF] Executed ViewResult - view Index executed in 2.6646ms.
+2025-06-17 00:43:55.664 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 5.4631ms
+2025-06-17 00:43:55.666 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:43:55.668 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 20.6251ms
+2025-06-17 00:43:55.685 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:43:55.685 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:43:55.697 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 11.7929ms
+2025-06-17 00:43:55.704 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.3186ms
+2025-06-17 00:44:04.812 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Animals - null null
+2025-06-17 00:44:04.819 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Animals - 404 0 null 7.4732ms
+2025-06-17 00:44:04.825 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7225/Animals, Response status code: 404
+2025-06-17 00:44:07.968 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Animal - null null
+2025-06-17 00:44:07.974 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Animal - 404 0 null 6.6176ms
+2025-06-17 00:44:07.980 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7225/Animal, Response status code: 404
+2025-06-17 00:44:13.339 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:44:13.348 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:44:13.350 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:44:13.353 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:44:13.356 +03:00 [INF] Executed ViewResult - view Index executed in 2.7344ms.
+2025-06-17 00:44:13.360 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 6.3749ms
+2025-06-17 00:44:13.362 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:44:13.364 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 25.0537ms
+2025-06-17 00:44:13.527 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:44:13.529 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:44:13.533 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 5.5635ms
+2025-06-17 00:44:13.544 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.7802ms
+2025-06-17 00:46:31.385 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Animal/List/1 - null null
+2025-06-17 00:46:31.407 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AnimalController.List (Qurbanet)'
+2025-06-17 00:46:31.415 +03:00 [INF] Route matched with {action = "List", controller = "Animal"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List(Int32) on controller Qurbanet.Controllers.AnimalController (Qurbanet).
+2025-06-17 00:46:31.443 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__organizationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."Breed", "a"."CreateDate", "a"."CreateUserId", "a"."Gender", "a"."IsDeleted", "a"."NameOrTag", "a"."Notes", "a"."OrganizationId", "a"."Price", "a"."Species", "a"."Status", "a"."UpdateDate", "a"."UpdateUserId", "a"."WeightKg"
+FROM "Animals" AS "a"
+WHERE "a"."OrganizationId" = @__organizationId_0
+2025-06-17 00:46:31.489 +03:00 [INF] Executing ViewResult, running view List.
+2025-06-17 00:46:31.505 +03:00 [INF] Executed ViewResult - view List executed in 16.3401ms.
+2025-06-17 00:46:31.520 +03:00 [INF] Executed action Qurbanet.Controllers.AnimalController.List (Qurbanet) in 101.4734ms
+2025-06-17 00:46:31.522 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AnimalController.List (Qurbanet)'
+2025-06-17 00:46:31.523 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Animal/List/1 - 200 null text/html; charset=utf-8 138.3244ms
+2025-06-17 00:46:31.537 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:46:31.544 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 6.9393ms
+2025-06-17 00:46:31.563 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:46:31.573 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.8386ms
+2025-06-17 00:48:36.458 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-06-17 00:48:36.547 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-06-17 00:48:36.604 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-06-16 21:48:36.5613326+00:00');
+SELECT changes();
+2025-06-17 00:48:36.679 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-06-17 00:48:36.697 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-06-17 00:48:36.705 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-17 00:48:36.720 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-06-17 00:48:36.725 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-06-17 00:48:36.984 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Organizations" AS "o")
+2025-06-17 00:48:37.179 +03:00 [INF] User profile is available. Using 'C:\Users\kamil\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-17 00:48:37.394 +03:00 [INF] Now listening on: https://localhost:7225
+2025-06-17 00:48:37.395 +03:00 [INF] Now listening on: http://localhost:5116
+2025-06-17 00:48:37.466 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-17 00:48:37.467 +03:00 [INF] Hosting environment: Development
+2025-06-17 00:48:37.469 +03:00 [INF] Content root path: C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet
+2025-06-17 00:48:38.106 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:48:38.279 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:48:38.301 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:48:38.315 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:48:38.444 +03:00 [INF] Executed ViewResult - view Index executed in 129.7015ms.
+2025-06-17 00:48:38.452 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 147.5597ms
+2025-06-17 00:48:38.455 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:48:38.473 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 371.2858ms
+2025-06-17 00:48:38.614 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:48:38.614 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:48:38.623 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.9904ms
+2025-06-17 00:48:38.680 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.1517ms
+2025-06-17 00:48:42.672 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Animal/List/1 - null null
+2025-06-17 00:48:42.693 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AnimalController.List (Qurbanet)'
+2025-06-17 00:48:42.711 +03:00 [INF] Route matched with {action = "List", controller = "Animal"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List(Int32) on controller Qurbanet.Controllers.AnimalController (Qurbanet).
+2025-06-17 00:48:44.707 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__organizationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."Breed", "a"."CreateDate", "a"."CreateUserId", "a"."Gender", "a"."IsDeleted", "a"."NameOrTag", "a"."Notes", "a"."OrganizationId", "a"."Price", "a"."Species", "a"."Status", "a"."UpdateDate", "a"."UpdateUserId", "a"."WeightKg"
+FROM "Animals" AS "a"
+WHERE "a"."OrganizationId" = @__organizationId_0
+2025-06-17 00:49:07.796 +03:00 [INF] Executing ViewResult, running view List.
+2025-06-17 00:49:07.813 +03:00 [INF] Executed ViewResult - view List executed in 17.0155ms.
+2025-06-17 00:49:07.818 +03:00 [INF] Executed action Qurbanet.Controllers.AnimalController.List (Qurbanet) in 25103.9472ms
+2025-06-17 00:49:07.820 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AnimalController.List (Qurbanet)'
+2025-06-17 00:49:07.822 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Animal/List/1 - 200 null text/html; charset=utf-8 25150.4351ms
+2025-06-17 00:49:07.837 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:49:07.837 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:49:07.849 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 12.1302ms
+2025-06-17 00:49:07.863 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.6683ms
+2025-06-17 00:49:10.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Animal/List/1 - null null
+2025-06-17 00:49:10.715 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AnimalController.List (Qurbanet)'
+2025-06-17 00:49:10.717 +03:00 [INF] Route matched with {action = "List", controller = "Animal"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List(Int32) on controller Qurbanet.Controllers.AnimalController (Qurbanet).
+2025-06-17 00:50:18.555 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__organizationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."Breed", "a"."CreateDate", "a"."CreateUserId", "a"."Gender", "a"."IsDeleted", "a"."NameOrTag", "a"."Notes", "a"."OrganizationId", "a"."Price", "a"."Species", "a"."Status", "a"."UpdateDate", "a"."UpdateUserId", "a"."WeightKg"
+FROM "Animals" AS "a"
+WHERE "a"."OrganizationId" = @__organizationId_0
+2025-06-17 00:50:45.797 +03:00 [INF] Executing ViewResult, running view List.
+2025-06-17 00:50:45.808 +03:00 [INF] Executed ViewResult - view List executed in 13.8376ms.
+2025-06-17 00:50:45.817 +03:00 [INF] Executed action Qurbanet.Controllers.AnimalController.List (Qurbanet) in 95096.535ms
+2025-06-17 00:50:45.819 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AnimalController.List (Qurbanet)'
+2025-06-17 00:50:45.821 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Animal/List/1 - 200 null text/html; charset=utf-8 95119.2988ms
+2025-06-17 00:50:45.837 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:50:45.838 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:50:45.850 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 12.6668ms
+2025-06-17 00:50:45.868 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.1958ms
+2025-06-17 00:50:49.060 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Animal/List/1 - null null
+2025-06-17 00:50:49.071 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AnimalController.List (Qurbanet)'
+2025-06-17 00:50:49.077 +03:00 [INF] Route matched with {action = "List", controller = "Animal"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List(Int32) on controller Qurbanet.Controllers.AnimalController (Qurbanet).
+2025-06-17 00:50:57.107 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__organizationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."Breed", "a"."CreateDate", "a"."CreateUserId", "a"."Gender", "a"."IsDeleted", "a"."NameOrTag", "a"."Notes", "a"."OrganizationId", "a"."Price", "a"."Species", "a"."Status", "a"."UpdateDate", "a"."UpdateUserId", "a"."WeightKg"
+FROM "Animals" AS "a"
+WHERE "a"."OrganizationId" = @__organizationId_0
+2025-06-17 00:51:42.140 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."Breed", "a"."CreateDate", "a"."CreateUserId", "a"."Gender", "a"."IsDeleted", "a"."NameOrTag", "a"."Notes", "a"."OrganizationId", "a"."Price", "a"."Species", "a"."Status", "a"."UpdateDate", "a"."UpdateUserId", "a"."WeightKg"
+FROM "Animals" AS "a"
+2025-06-17 00:52:00.923 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__organizationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."Breed", "a"."CreateDate", "a"."CreateUserId", "a"."Gender", "a"."IsDeleted", "a"."NameOrTag", "a"."Notes", "a"."OrganizationId", "a"."Price", "a"."Species", "a"."Status", "a"."UpdateDate", "a"."UpdateUserId", "a"."WeightKg"
+FROM "Animals" AS "a"
+WHERE "a"."OrganizationId" = @__organizationId_0
+2025-06-17 00:52:02.510 +03:00 [INF] Executing ViewResult, running view List.
+2025-06-17 00:52:02.525 +03:00 [INF] Executed ViewResult - view List executed in 16.4067ms.
+2025-06-17 00:52:02.530 +03:00 [INF] Executed action Qurbanet.Controllers.AnimalController.List (Qurbanet) in 73449.8218ms
+2025-06-17 00:52:02.535 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AnimalController.List (Qurbanet)'
+2025-06-17 00:52:02.538 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Animal/List/1 - 200 null text/html; charset=utf-8 73478.4887ms
+2025-06-17 00:52:02.572 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:52:02.574 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:52:02.588 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 14.1459ms
+2025-06-17 00:52:02.607 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.2128ms
+2025-06-17 00:52:06.968 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Animal/List/1 - null null
+2025-06-17 00:52:06.980 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AnimalController.List (Qurbanet)'
+2025-06-17 00:52:06.986 +03:00 [INF] Route matched with {action = "List", controller = "Animal"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List(Int32) on controller Qurbanet.Controllers.AnimalController (Qurbanet).
+2025-06-17 00:52:15.313 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."Breed", "a"."CreateDate", "a"."CreateUserId", "a"."Gender", "a"."IsDeleted", "a"."NameOrTag", "a"."Notes", "a"."OrganizationId", "a"."Price", "a"."Species", "a"."Status", "a"."UpdateDate", "a"."UpdateUserId", "a"."WeightKg"
+FROM "Animals" AS "a"
+2025-06-17 00:52:15.320 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__organizationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."Breed", "a"."CreateDate", "a"."CreateUserId", "a"."Gender", "a"."IsDeleted", "a"."NameOrTag", "a"."Notes", "a"."OrganizationId", "a"."Price", "a"."Species", "a"."Status", "a"."UpdateDate", "a"."UpdateUserId", "a"."WeightKg"
+FROM "Animals" AS "a"
+WHERE "a"."OrganizationId" = @__organizationId_0
+2025-06-17 00:52:15.323 +03:00 [INF] Executing ViewResult, running view List.
+2025-06-17 00:52:15.329 +03:00 [INF] Executed ViewResult - view List executed in 6.3174ms.
+2025-06-17 00:52:15.331 +03:00 [INF] Executed action Qurbanet.Controllers.AnimalController.List (Qurbanet) in 8340.6506ms
+2025-06-17 00:52:15.333 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AnimalController.List (Qurbanet)'
+2025-06-17 00:52:15.334 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Animal/List/1 - 200 null text/html; charset=utf-8 8366.9769ms
+2025-06-17 00:52:15.353 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:52:15.354 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:52:15.361 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 7.286ms
+2025-06-17 00:52:15.366 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.5647ms
+2025-06-17 00:52:18.419 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-17 00:52:18.427 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:52:18.433 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-17 00:52:18.453 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-17 00:52:18.483 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:52:18.500 +03:00 [INF] Executed ViewResult - view Index executed in 17.2389ms.
+2025-06-17 00:52:18.502 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 64.1377ms
+2025-06-17 00:52:18.503 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-17 00:52:18.505 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 200 null text/html; charset=utf-8 86.5331ms
+2025-06-17 00:52:18.542 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - null null
+2025-06-17 00:52:18.544 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:52:18.545 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:52:18.562 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 17.3673ms
+2025-06-17 00:52:18.567 +03:00 [INF] The file /Qurbanet.styles.css was not modified
+2025-06-17 00:52:18.569 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - 304 null text/css 27.4583ms
+2025-06-17 00:52:18.577 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.4697ms
+2025-06-17 00:52:21.279 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization/Details/1 - null null
+2025-06-17 00:52:21.285 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Details (Qurbanet)'
+2025-06-17 00:52:21.292 +03:00 [INF] Route matched with {action = "Details", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(Int32) on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-17 00:52:21.352 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+WHERE "o"."Id" = @__p_0
+LIMIT 1
+2025-06-17 00:52:21.367 +03:00 [INF] Executing ViewResult, running view Details.
+2025-06-17 00:52:21.378 +03:00 [INF] Executed ViewResult - view Details executed in 12.6408ms.
+2025-06-17 00:52:21.380 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Details (Qurbanet) in 84.8603ms
+2025-06-17 00:52:21.381 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Details (Qurbanet)'
+2025-06-17 00:52:21.383 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization/Details/1 - 200 null text/html; charset=utf-8 104.1137ms
+2025-06-17 00:52:21.404 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:52:21.404 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:52:21.415 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 10.7143ms
+2025-06-17 00:52:21.419 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.0021ms
+2025-06-17 00:52:24.348 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Animal/Create?organizationId=1 - null null
+2025-06-17 00:52:24.358 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Organizer|Admin)
+2025-06-17 00:52:24.371 +03:00 [INF] AuthenticationScheme: Cookies was forbidden.
+2025-06-17 00:52:24.373 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Animal/Create?organizationId=1 - 302 0 null 25.2818ms
+2025-06-17 00:52:24.378 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/AccessDenied?ReturnUrl=%2FAnimal%2FCreate%3ForganizationId%3D1 - null null
+2025-06-17 00:52:24.385 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.AccessDenied (Qurbanet)'
+2025-06-17 00:52:24.387 +03:00 [INF] Route matched with {action = "AccessDenied", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AccessDenied() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-17 00:52:24.392 +03:00 [INF] Executing ViewResult, running view AccessDenied.
+2025-06-17 00:52:24.400 +03:00 [INF] Executed ViewResult - view AccessDenied executed in 8.2994ms.
+2025-06-17 00:52:24.402 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.AccessDenied (Qurbanet) in 11.8829ms
+2025-06-17 00:52:24.404 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.AccessDenied (Qurbanet)'
+2025-06-17 00:52:24.405 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/AccessDenied?ReturnUrl=%2FAnimal%2FCreate%3ForganizationId%3D1 - 200 null text/html; charset=utf-8 27.5438ms
+2025-06-17 00:52:24.418 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:52:24.419 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:52:24.427 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.8832ms
+2025-06-17 00:52:24.430 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.6811ms
+2025-06-17 00:52:27.077 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:52:27.083 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:52:27.085 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:52:27.088 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:52:27.092 +03:00 [INF] Executed ViewResult - view Index executed in 4.5505ms.
+2025-06-17 00:52:27.094 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 6.5505ms
+2025-06-17 00:52:27.095 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:52:27.097 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 19.7024ms
+2025-06-17 00:52:27.116 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:52:27.116 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:52:27.124 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.4129ms
+2025-06-17 00:52:27.128 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.892ms
+2025-06-17 00:52:29.258 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/Logout - null null
+2025-06-17 00:52:29.264 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Logout (Qurbanet)'
+2025-06-17 00:52:29.271 +03:00 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-17 00:52:29.280 +03:00 [INF] AuthenticationScheme: Cookies signed out.
+2025-06-17 00:52:29.283 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-17 00:52:29.284 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Logout (Qurbanet) in 10.3633ms
+2025-06-17 00:52:29.287 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Logout (Qurbanet)'
+2025-06-17 00:52:29.289 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/Logout - 302 0 null 30.6564ms
+2025-06-17 00:52:29.292 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:52:29.298 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-06-17 00:52:29.301 +03:00 [INF] AuthenticationScheme: Cookies was challenged.
+2025-06-17 00:52:29.302 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 302 0 null 9.7879ms
+2025-06-17 00:52:29.307 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/Login?ReturnUrl=%2F - null null
+2025-06-17 00:52:29.313 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-17 00:52:29.315 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-17 00:52:29.319 +03:00 [INF] Executing ViewResult, running view Login.
+2025-06-17 00:52:29.336 +03:00 [INF] Executed ViewResult - view Login executed in 17.6199ms.
+2025-06-17 00:52:29.339 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Login (Qurbanet) in 22.2555ms
+2025-06-17 00:52:29.342 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-17 00:52:29.345 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/Login?ReturnUrl=%2F - 200 null text/html; charset=utf-8 38.5879ms
+2025-06-17 00:52:29.369 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:52:29.369 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:52:29.378 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 9.2251ms
+2025-06-17 00:52:29.381 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.4556ms
+2025-06-17 00:52:34.794 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/Account/Login - application/x-www-form-urlencoded 220
+2025-06-17 00:52:34.801 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-17 00:52:34.807 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-17 00:52:34.842 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 9), @__password_1='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreateDate", "u"."CreateUserId", "u"."Email", "u"."IsDeleted", "u"."Name", "u"."Password", "u"."Phone", "u"."Surname", "u"."UpdateDate", "u"."UpdateUserId", "u"."UserType", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__username_0 AND "u"."Password" = @__password_1
+2025-06-17 00:52:34.874 +03:00 [INF] AuthenticationScheme: Cookies signed in.
+2025-06-17 00:52:34.877 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-17 00:52:34.878 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Login (Qurbanet) in 67.7401ms
+2025-06-17 00:52:34.879 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-17 00:52:34.881 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/Account/Login - 302 0 null 86.4296ms
+2025-06-17 00:52:34.884 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 00:52:34.889 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:52:34.890 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 00:52:34.893 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 00:52:34.895 +03:00 [INF] Executed ViewResult - view Index executed in 2.6763ms.
+2025-06-17 00:52:34.897 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 4.8269ms
+2025-06-17 00:52:34.899 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 00:52:34.900 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 15.9302ms
+2025-06-17 00:52:34.923 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 00:52:34.923 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 00:52:34.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 4.6487ms
+2025-06-17 00:52:34.942 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.1131ms
+2025-06-17 01:04:05.567 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 01:04:05.587 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:05.590 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 01:04:05.593 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 01:04:05.603 +03:00 [INF] Executed ViewResult - view Index executed in 9.9509ms.
+2025-06-17 01:04:05.605 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 11.8008ms
+2025-06-17 01:04:05.613 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:05.616 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 49.49ms
+2025-06-17 01:04:05.626 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 01:04:05.631 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:05.633 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:05.634 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 01:04:05.638 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 200 0 null 5.0913ms
+2025-06-17 01:04:05.640 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:05.653 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 200 0 null 13.4728ms
+2025-06-17 01:04:05.641 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 01:04:05.664 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:05.678 +03:00 [INF] Executed ViewResult - view Index executed in 36.5617ms.
+2025-06-17 01:04:05.685 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 200 0 null 21.6795ms
+2025-06-17 01:04:05.719 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 77.7359ms
+2025-06-17 01:04:05.725 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:05.726 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 100.6665ms
+2025-06-17 01:04:05.775 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-06-17 01:04:05.776 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/jquery/dist/jquery.min.js - null null
+2025-06-17 01:04:05.781 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - null null
+2025-06-17 01:04:05.795 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - null null
+2025-06-17 01:04:05.886 +03:00 [INF] Sending file. Request path: '/Qurbanet.styles.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\obj\Debug\net8.0\scopedcss\bundle\Qurbanet.styles.css'
+2025-06-17 01:04:05.897 +03:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-06-17 01:04:05.915 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-06-17 01:04:05.893 +03:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\css\site.css'
+2025-06-17 01:04:05.909 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - 200 1207 text/css 114.1535ms
+2025-06-17 01:04:05.915 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/jquery/dist/jquery.min.js - 200 89503 text/javascript 138.9747ms
+2025-06-17 01:04:05.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/css/bootstrap.min.css - 200 162726 text/css 150.8886ms
+2025-06-17 01:04:05.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - 200 362 text/css 152.0313ms
+2025-06-17 01:04:06.147 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2025-06-17 01:04:06.147 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 01:04:06.148 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-06-17 01:04:06.156 +03:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\js\site.js'
+2025-06-17 01:04:06.158 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 11.4125ms
+2025-06-17 01:04:06.164 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 231 text/javascript 17.4984ms
+2025-06-17 01:04:06.167 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-06-17 01:04:06.185 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78474 text/javascript 38.9029ms
+2025-06-17 01:04:06.197 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 01:04:06.209 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.5134ms
+2025-06-17 01:04:06.477 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/favicon.ico - null null
+2025-06-17 01:04:06.512 +03:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\favicon.ico'
+2025-06-17 01:04:06.521 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/favicon.ico - 200 5430 image/x-icon 44.378ms
+2025-06-17 01:04:08.104 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:08.106 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 200 0 null 3.0648ms
+2025-06-17 01:04:08.304 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?nonce=1750111448301 - null null
+2025-06-17 01:04:08.304 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/css/site.css?nonce=1750111448301 - null null
+2025-06-17 01:04:08.304 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/css/bootstrap.min.css?nonce=1750111448300 - null null
+2025-06-17 01:04:08.309 +03:00 [INF] Sending file. Request path: '/Qurbanet.styles.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\obj\Debug\net8.0\scopedcss\bundle\Qurbanet.styles.css'
+2025-06-17 01:04:08.312 +03:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\css\site.css'
+2025-06-17 01:04:08.319 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?nonce=1750111448301 - 200 1207 text/css 15.0868ms
+2025-06-17 01:04:08.322 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/css/site.css?nonce=1750111448301 - 200 362 text/css 17.8871ms
+2025-06-17 01:04:08.326 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-06-17 01:04:08.332 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/css/bootstrap.min.css?nonce=1750111448300 - 200 162726 text/css 28.6541ms
+2025-06-17 01:04:12.762 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 01:04:12.769 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:12.770 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 01:04:12.772 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 01:04:12.775 +03:00 [INF] Executed ViewResult - view Index executed in 2.876ms.
+2025-06-17 01:04:12.783 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 10.6431ms
+2025-06-17 01:04:12.786 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:12.789 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 27.0884ms
+2025-06-17 01:04:12.827 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 01:04:12.827 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 01:04:12.848 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 20.9812ms
+2025-06-17 01:04:12.855 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.0964ms
+2025-06-17 01:04:13.056 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/favicon.ico - null null
+2025-06-17 01:04:13.080 +03:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\favicon.ico'
+2025-06-17 01:04:13.088 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/favicon.ico - 200 5430 image/x-icon 32.1905ms
+2025-06-17 01:04:17.104 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:17.068 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 01:04:17.138 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 200 0 null 33.7922ms
+2025-06-17 01:04:17.155 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:17.167 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:17.324 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 200 0 null 169.2633ms
+2025-06-17 01:04:17.325 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 01:04:17.328 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:17.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 200 0 null 9.2144ms
+2025-06-17 01:04:17.335 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 01:04:17.341 +03:00 [INF] Executed ViewResult - view Index executed in 6.1099ms.
+2025-06-17 01:04:17.345 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 10.0648ms
+2025-06-17 01:04:17.348 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:17.350 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 281.531ms
+2025-06-17 01:04:17.353 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 01:04:17.369 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:17.400 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 01:04:17.435 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 01:04:17.437 +03:00 [INF] Executed ViewResult - view Index executed in 2.5858ms.
+2025-06-17 01:04:17.446 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 11.2948ms
+2025-06-17 01:04:17.448 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:17.449 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 96.215ms
+2025-06-17 01:04:17.469 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 01:04:17.473 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:17.475 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 01:04:17.476 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:17.477 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 01:04:17.480 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 200 0 null 5.0309ms
+2025-06-17 01:04:17.483 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:17.483 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:17.482 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:17.485 +03:00 [INF] Executed ViewResult - view Index executed in 7.377ms.
+2025-06-17 01:04:17.489 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 200 0 null 5.6236ms
+2025-06-17 01:04:17.492 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 200 0 null 9.1767ms
+2025-06-17 01:04:17.483 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:17.483 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:17.482 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - null null
+2025-06-17 01:04:17.495 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 499 null null 12.514ms
+2025-06-17 01:04:17.497 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 19.8111ms
+2025-06-17 01:04:17.506 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 499 null null 23.7893ms
+2025-06-17 01:04:17.517 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:17.518 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 01:04:17.509 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 499 null null 26.1667ms
+2025-06-17 01:04:17.523 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 54.1887ms
+2025-06-17 01:04:17.518 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 01:04:17.511 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/clear-browser-cache - 499 null null 28.8214ms
+2025-06-17 01:04:17.535 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.6782ms
+2025-06-17 01:04:17.540 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 21.6593ms
+2025-06-17 01:04:18.383 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/favicon.ico - null null
+2025-06-17 01:04:18.415 +03:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\favicon.ico'
+2025-06-17 01:04:18.442 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/favicon.ico - 200 5430 image/x-icon 59.2753ms
+2025-06-17 01:04:19.356 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 01:04:19.370 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 01:04:19.379 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:19.386 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:19.389 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 01:04:19.391 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 01:04:19.388 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 01:04:19.405 +03:00 [INF] Executed ViewResult - view Index executed in 13.9097ms.
+2025-06-17 01:04:19.405 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 01:04:19.406 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 15.5267ms
+2025-06-17 01:04:19.408 +03:00 [INF] Executed ViewResult - view Index executed in 3.1497ms.
+2025-06-17 01:04:19.409 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:19.414 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 43.9328ms
+2025-06-17 01:04:19.410 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 5.1138ms
+2025-06-17 01:04:19.418 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:19.419 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 63.0532ms
+2025-06-17 01:04:19.613 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 01:04:19.613 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 01:04:19.685 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.4871ms
+2025-06-17 01:04:19.695 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 81.8359ms
+2025-06-17 01:04:21.360 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 01:04:21.376 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:21.386 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 01:04:21.393 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 01:04:21.401 +03:00 [INF] Executed ViewResult - view Index executed in 8.6493ms.
+2025-06-17 01:04:21.407 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 14.0394ms
+2025-06-17 01:04:21.416 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:21.421 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 61.0037ms
+2025-06-17 01:04:21.518 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 01:04:21.525 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 01:04:21.573 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 47.846ms
+2025-06-17 01:04:21.583 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.9047ms
+2025-06-17 01:04:23.642 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 01:04:23.701 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:23.709 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 01:04:23.716 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 01:04:23.723 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 01:04:23.726 +03:00 [INF] Executed ViewResult - view Index executed in 9.6506ms.
+2025-06-17 01:04:23.733 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:23.734 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 17.6028ms
+2025-06-17 01:04:23.739 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 01:04:23.750 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:23.753 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 01:04:23.754 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 112.044ms
+2025-06-17 01:04:23.758 +03:00 [INF] Executed ViewResult - view Index executed in 5.5941ms.
+2025-06-17 01:04:23.769 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 15.9703ms
+2025-06-17 01:04:23.770 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:23.772 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 48.9401ms
+2025-06-17 01:04:23.853 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 01:04:23.853 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 01:04:23.890 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 36.7274ms
+2025-06-17 01:04:23.901 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.866ms
+2025-06-17 01:04:51.282 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-17 01:04:51.287 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:51.288 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-17 01:04:51.291 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-17 01:04:51.294 +03:00 [INF] Executed ViewResult - view Index executed in 2.6555ms.
+2025-06-17 01:04:51.296 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 4.901ms
+2025-06-17 01:04:51.297 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-17 01:04:51.299 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 16.5624ms
+2025-06-17 01:04:51.321 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-17 01:04:51.321 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-17 01:04:51.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 6.193ms
+2025-06-17 01:04:51.351 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.9091ms

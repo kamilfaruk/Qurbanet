@@ -11,8 +11,8 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LogoutPath = "/Account/Logout";
         options.AccessDeniedPath = "/Account/AccessDenied";
     });
-app.UseAuthentication();
-// Serilog yapýlandýrmasý
+
+// Serilog yapılandırması
 builder.AddSerilogLogging();
 
 // Add services to the container.
@@ -20,6 +20,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddApplicationServices(builder.Configuration);
 
 var app = builder.Build();
+app.UseAuthentication();
 
 // Seed demo data
 using (var scope = app.Services.CreateScope())

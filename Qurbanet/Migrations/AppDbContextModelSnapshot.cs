@@ -157,9 +157,8 @@ namespace Qurbanet.Migrations
                     b.Property<int>("OrderNumber")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Stage")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Stage")
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime?>("StartTime")
                         .HasColumnType("TEXT");
