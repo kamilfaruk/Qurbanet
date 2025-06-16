@@ -280,3 +280,490 @@ FROM "Organizations" AS "o"
 2025-06-16 23:31:31.461 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78474 text/javascript 18.2604ms
 2025-06-16 23:31:31.467 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 231 text/javascript 23.503ms
 2025-06-16 23:31:31.513 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.4834ms
+2025-06-16 23:50:40.538 +03:00 [INF] User profile is available. Using 'C:\Users\kamil\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 23:50:40.798 +03:00 [INF] Now listening on: https://localhost:7225
+2025-06-16 23:50:40.800 +03:00 [INF] Now listening on: http://localhost:5116
+2025-06-16 23:50:40.870 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 23:50:40.872 +03:00 [INF] Hosting environment: Development
+2025-06-16 23:50:40.873 +03:00 [INF] Content root path: C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet
+2025-06-16 23:50:41.586 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 23:50:41.735 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:50:41.787 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 23:50:41.804 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:50:41.935 +03:00 [INF] Executed ViewResult - view Index executed in 133.4952ms.
+2025-06-16 23:50:41.943 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 152.7442ms
+2025-06-16 23:50:41.946 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:50:41.957 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 380.2364ms
+2025-06-16 23:50:41.957 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - null null
+2025-06-16 23:50:41.970 +03:00 [INF] The file /Qurbanet.styles.css was not modified
+2025-06-16 23:50:41.972 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - 304 null text/css 14.2224ms
+2025-06-16 23:50:42.107 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:50:42.107 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:50:42.119 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 12.0171ms
+2025-06-16 23:50:42.165 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.8933ms
+2025-06-16 23:50:48.287 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/Login - null null
+2025-06-16 23:50:48.303 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:50:48.308 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-16 23:50:48.619 +03:00 [INF] Executing ViewResult, running view Login.
+2025-06-16 23:50:48.637 +03:00 [INF] Executed ViewResult - view Login executed in 18.8939ms.
+2025-06-16 23:50:48.641 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Login (Qurbanet) in 329.6667ms
+2025-06-16 23:50:48.644 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:50:48.648 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/Login - 200 null text/html; charset=utf-8 362.1666ms
+2025-06-16 23:50:48.668 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:50:48.669 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:50:48.684 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 15.1426ms
+2025-06-16 23:50:48.693 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.6455ms
+2025-06-16 23:50:50.465 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/Register - null null
+2025-06-16 23:50:50.472 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Register (Qurbanet)'
+2025-06-16 23:50:50.476 +03:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-16 23:50:50.488 +03:00 [INF] Executing ViewResult, running view Register.
+2025-06-16 23:50:50.545 +03:00 [INF] Executed ViewResult - view Register executed in 57.6824ms.
+2025-06-16 23:50:50.547 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Register (Qurbanet) in 68.3623ms
+2025-06-16 23:50:50.549 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Register (Qurbanet)'
+2025-06-16 23:50:50.554 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/Register - 200 null text/html; charset=utf-8 88.7191ms
+2025-06-16 23:50:50.573 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2025-06-16 23:50:50.574 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2025-06-16 23:50:50.576 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:50:50.586 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 10.0036ms
+2025-06-16 23:50:50.607 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:50:50.638 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.301ms
+2025-06-16 23:50:50.651 +03:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2025-06-16 23:50:50.651 +03:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js'
+2025-06-16 23:50:50.652 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/jquery-validation/dist/jquery.validate.min.js - 200 24604 text/javascript 80.2593ms
+2025-06-16 23:50:50.654 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 200 5831 text/javascript 81.2508ms
+2025-06-16 23:52:07.223 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/Login - null null
+2025-06-16 23:52:07.236 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:52:07.238 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-16 23:52:07.248 +03:00 [INF] Executing ViewResult, running view Login.
+2025-06-16 23:52:07.257 +03:00 [INF] Executed ViewResult - view Login executed in 8.9305ms.
+2025-06-16 23:52:07.267 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Login (Qurbanet) in 25.4069ms
+2025-06-16 23:52:07.269 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:52:07.272 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/Login - 200 null text/html; charset=utf-8 49.172ms
+2025-06-16 23:52:07.293 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:52:07.297 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:52:07.304 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 7.2032ms
+2025-06-16 23:52:07.320 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.381ms
+2025-06-16 23:52:13.428 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/Account/Login - application/x-www-form-urlencoded 208
+2025-06-16 23:52:13.435 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:52:13.447 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-16 23:52:14.548 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__username_0='?' (Size = 3), @__password_1='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreateDate", "u"."CreateUserId", "u"."Email", "u"."IsDeleted", "u"."Name", "u"."Password", "u"."Phone", "u"."Surname", "u"."UpdateDate", "u"."UpdateUserId", "u"."UserType", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__username_0 AND "u"."Password" = @__password_1
+2025-06-16 23:52:14.670 +03:00 [INF] AuthenticationScheme: Cookies signed in.
+2025-06-16 23:52:14.672 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-16 23:52:14.674 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Login (Qurbanet) in 1223.6972ms
+2025-06-16 23:52:14.676 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:52:14.682 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 23:52:14.682 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/Account/Login - 302 0 null 1254.4467ms
+2025-06-16 23:52:14.688 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:52:14.689 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 23:52:14.691 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:52:14.695 +03:00 [INF] Executed ViewResult - view Index executed in 3.6065ms.
+2025-06-16 23:52:14.697 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 5.8133ms
+2025-06-16 23:52:14.699 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:52:14.701 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 18.8713ms
+2025-06-16 23:52:14.723 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:52:14.724 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:52:14.733 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.9472ms
+2025-06-16 23:52:14.735 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.6003ms
+2025-06-16 23:52:20.231 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-16 23:52:20.246 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 23:52:20.292 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-16 23:52:20.357 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-16 23:52:20.371 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:52:20.379 +03:00 [INF] Executed ViewResult - view Index executed in 7.9994ms.
+2025-06-16 23:52:20.381 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 84.8946ms
+2025-06-16 23:52:20.383 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 23:52:20.384 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 200 null text/html; charset=utf-8 153.8941ms
+2025-06-16 23:52:20.400 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:52:20.400 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:52:20.409 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.4969ms
+2025-06-16 23:52:20.418 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.4875ms
+2025-06-16 23:52:21.513 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Customer - null null
+2025-06-16 23:52:21.521 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.CustomerController.Index (Qurbanet)'
+2025-06-16 23:52:21.527 +03:00 [INF] Route matched with {action = "Index", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.CustomerController (Qurbanet).
+2025-06-16 23:52:21.553 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."CreateDate", "c"."CreateUserId", "c"."Email", "c"."FullName", "c"."IsDeleted", "c"."Notes", "c"."PhoneNumber", "c"."UpdateDate", "c"."UpdateUserId"
+FROM "Customers" AS "c"
+2025-06-16 23:52:21.561 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:52:21.568 +03:00 [INF] Executed ViewResult - view Index executed in 7.8105ms.
+2025-06-16 23:52:21.570 +03:00 [INF] Executed action Qurbanet.Controllers.CustomerController.Index (Qurbanet) in 38.8568ms
+2025-06-16 23:52:21.572 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.CustomerController.Index (Qurbanet)'
+2025-06-16 23:52:21.573 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Customer - 200 null text/html; charset=utf-8 60.9162ms
+2025-06-16 23:52:21.586 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:52:21.586 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:52:21.598 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 11.4919ms
+2025-06-16 23:52:21.602 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.6887ms
+2025-06-16 23:52:23.182 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Customer/Create - null null
+2025-06-16 23:52:23.191 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Organizer|Admin)
+2025-06-16 23:52:23.201 +03:00 [INF] AuthenticationScheme: Cookies was forbidden.
+2025-06-16 23:52:23.204 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Customer/Create - 302 0 null 21.8404ms
+2025-06-16 23:52:23.208 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/AccessDenied?ReturnUrl=%2FCustomer%2FCreate - null null
+2025-06-16 23:52:23.214 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/AccessDenied?ReturnUrl=%2FCustomer%2FCreate - 404 0 null 6.4346ms
+2025-06-16 23:52:23.219 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7225/Account/AccessDenied, Response status code: 404
+2025-06-16 23:52:27.461 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:52:27.468 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 7.1129ms
+2025-06-16 23:52:29.760 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 23:52:29.765 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:52:29.767 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 23:52:29.770 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:52:29.774 +03:00 [INF] Executed ViewResult - view Index executed in 4.4744ms.
+2025-06-16 23:52:29.777 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 6.8011ms
+2025-06-16 23:52:29.779 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:52:29.781 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 21.4214ms
+2025-06-16 23:52:29.808 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:52:29.809 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:52:29.818 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 9.7795ms
+2025-06-16 23:52:29.821 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.1694ms
+2025-06-16 23:52:32.322 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-16 23:52:32.329 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 23:52:32.331 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-16 23:52:32.335 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-16 23:52:32.339 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:52:32.342 +03:00 [INF] Executed ViewResult - view Index executed in 2.7229ms.
+2025-06-16 23:52:32.344 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 11.2487ms
+2025-06-16 23:52:32.345 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 23:52:32.347 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 200 null text/html; charset=utf-8 24.5072ms
+2025-06-16 23:52:32.365 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:52:32.365 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:52:32.373 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.6771ms
+2025-06-16 23:52:32.377 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.3033ms
+2025-06-16 23:52:33.814 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization/Create - null null
+2025-06-16 23:52:33.821 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Organizer|Admin)
+2025-06-16 23:52:33.823 +03:00 [INF] AuthenticationScheme: Cookies was forbidden.
+2025-06-16 23:52:33.824 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization/Create - 302 0 null 10.099ms
+2025-06-16 23:52:33.828 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/AccessDenied?ReturnUrl=%2FOrganization%2FCreate - null null
+2025-06-16 23:52:33.834 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/AccessDenied?ReturnUrl=%2FOrganization%2FCreate - 404 0 null 6.726ms
+2025-06-16 23:52:33.839 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7225/Account/AccessDenied, Response status code: 404
+2025-06-16 23:52:37.541 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:52:37.549 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.6145ms
+2025-06-16 23:52:39.883 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/Logout - null null
+2025-06-16 23:52:39.890 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Logout (Qurbanet)'
+2025-06-16 23:52:39.895 +03:00 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-16 23:52:39.903 +03:00 [INF] AuthenticationScheme: Cookies signed out.
+2025-06-16 23:52:39.905 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-16 23:52:39.907 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Logout (Qurbanet) in 8.7947ms
+2025-06-16 23:52:39.908 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Logout (Qurbanet)'
+2025-06-16 23:52:39.909 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/Logout - 302 0 null 26.4602ms
+2025-06-16 23:52:39.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 23:52:39.917 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:52:39.918 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 23:52:39.921 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:52:39.924 +03:00 [INF] Executed ViewResult - view Index executed in 2.6402ms.
+2025-06-16 23:52:39.926 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 4.4851ms
+2025-06-16 23:52:39.927 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:52:39.929 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 16.2908ms
+2025-06-16 23:52:39.950 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:52:39.950 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:52:39.958 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.3725ms
+2025-06-16 23:52:39.962 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.779ms
+2025-06-16 23:52:44.224 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/Login - null null
+2025-06-16 23:52:44.230 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:52:44.232 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-16 23:52:44.235 +03:00 [INF] Executing ViewResult, running view Login.
+2025-06-16 23:52:44.239 +03:00 [INF] Executed ViewResult - view Login executed in 4.006ms.
+2025-06-16 23:52:44.242 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Login (Qurbanet) in 7.1007ms
+2025-06-16 23:52:44.244 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:52:44.246 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/Login - 200 null text/html; charset=utf-8 23.0138ms
+2025-06-16 23:52:44.267 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:52:44.267 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:52:44.279 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 11.9697ms
+2025-06-16 23:52:44.281 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.3598ms
+2025-06-16 23:52:48.921 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/Account/Login - application/x-www-form-urlencoded 214
+2025-06-16 23:52:48.927 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:52:48.928 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-16 23:52:48.938 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__username_0='?' (Size = 6), @__password_1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreateDate", "u"."CreateUserId", "u"."Email", "u"."IsDeleted", "u"."Name", "u"."Password", "u"."Phone", "u"."Surname", "u"."UpdateDate", "u"."UpdateUserId", "u"."UserType", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__username_0 AND "u"."Password" = @__password_1
+2025-06-16 23:52:48.942 +03:00 [INF] AuthenticationScheme: Cookies signed in.
+2025-06-16 23:52:48.943 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-16 23:52:48.945 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Login (Qurbanet) in 13.68ms
+2025-06-16 23:52:48.946 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:52:48.948 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/Account/Login - 302 0 null 26.6901ms
+2025-06-16 23:52:48.952 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 23:52:48.958 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:52:48.959 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 23:52:48.962 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:52:48.965 +03:00 [INF] Executed ViewResult - view Index executed in 3.1144ms.
+2025-06-16 23:52:48.968 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 6.0676ms
+2025-06-16 23:52:48.970 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:52:48.973 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 20.5707ms
+2025-06-16 23:52:48.996 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:52:48.997 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:52:49.009 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 12.2188ms
+2025-06-16 23:52:49.012 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.5628ms
+2025-06-16 23:52:55.045 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-16 23:52:55.051 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 23:52:55.053 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-16 23:52:55.058 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-16 23:52:55.061 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:52:55.066 +03:00 [INF] Executed ViewResult - view Index executed in 4.5809ms.
+2025-06-16 23:52:55.070 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 13.7704ms
+2025-06-16 23:52:55.072 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 23:52:55.074 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 200 null text/html; charset=utf-8 29.7697ms
+2025-06-16 23:52:55.100 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:52:55.100 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:52:55.109 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.5294ms
+2025-06-16 23:52:55.119 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.7467ms
+2025-06-16 23:52:56.543 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization/Create - null null
+2025-06-16 23:52:56.550 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Create (Qurbanet)'
+2025-06-16 23:52:56.553 +03:00 [INF] Route matched with {action = "Create", controller = "Organization"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-16 23:52:56.557 +03:00 [INF] Executing ViewResult, running view Create.
+2025-06-16 23:52:56.585 +03:00 [INF] Executed ViewResult - view Create executed in 28.201ms.
+2025-06-16 23:52:56.588 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Create (Qurbanet) in 31.3459ms
+2025-06-16 23:52:56.590 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Create (Qurbanet)'
+2025-06-16 23:52:56.592 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization/Create - 200 null text/html; charset=utf-8 48.8099ms
+2025-06-16 23:52:56.611 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:52:56.611 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:52:56.619 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.0222ms
+2025-06-16 23:52:56.623 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.5081ms
+2025-06-16 23:53:03.930 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:53:03.935 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 5.299ms
+2025-06-16 23:57:29.848 +03:00 [INF] User profile is available. Using 'C:\Users\kamil\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 23:57:30.113 +03:00 [INF] Now listening on: https://localhost:7225
+2025-06-16 23:57:30.116 +03:00 [INF] Now listening on: http://localhost:5116
+2025-06-16 23:57:30.185 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 23:57:30.187 +03:00 [INF] Hosting environment: Development
+2025-06-16 23:57:30.188 +03:00 [INF] Content root path: C:\Users\kamil\OneDrive\Masaüstü\KOD\Qurbanet\Qurbanet
+2025-06-16 23:57:30.849 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 23:57:30.988 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:57:31.024 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 23:57:31.042 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:57:31.147 +03:00 [INF] Executed ViewResult - view Index executed in 109.7471ms.
+2025-06-16 23:57:31.154 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 127.0148ms
+2025-06-16 23:57:31.157 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:57:31.168 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - null null
+2025-06-16 23:57:31.170 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 330.6437ms
+2025-06-16 23:57:31.181 +03:00 [INF] The file /Qurbanet.styles.css was not modified
+2025-06-16 23:57:31.183 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Qurbanet.styles.css?v=gB3jHJ0T7uBiXPei5EGh1XPPzDD0z_lGIOnvDvSy86c - 304 null text/css 15.6632ms
+2025-06-16 23:57:31.325 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:57:31.326 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:57:31.335 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 10.0737ms
+2025-06-16 23:57:31.375 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.6339ms
+2025-06-16 23:57:35.971 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/Logout - null null
+2025-06-16 23:57:35.993 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Logout (Qurbanet)'
+2025-06-16 23:57:36.005 +03:00 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-16 23:57:36.321 +03:00 [INF] AuthenticationScheme: Cookies signed out.
+2025-06-16 23:57:36.323 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-16 23:57:36.326 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Logout (Qurbanet) in 316.9854ms
+2025-06-16 23:57:36.328 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Logout (Qurbanet)'
+2025-06-16 23:57:36.332 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/Logout - 302 0 null 360.8189ms
+2025-06-16 23:57:36.334 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 23:57:36.342 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:57:36.345 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 23:57:36.348 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:57:36.356 +03:00 [INF] Executed ViewResult - view Index executed in 8.2211ms.
+2025-06-16 23:57:36.359 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 11.1077ms
+2025-06-16 23:57:36.361 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:57:36.364 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 29.7307ms
+2025-06-16 23:57:36.384 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:57:36.384 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:57:36.394 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 10.6165ms
+2025-06-16 23:57:36.419 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.3565ms
+2025-06-16 23:57:39.354 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-16 23:57:39.368 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-06-16 23:57:39.375 +03:00 [INF] AuthenticationScheme: Cookies was challenged.
+2025-06-16 23:57:39.378 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 302 0 null 24.0566ms
+2025-06-16 23:57:39.382 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/Login?ReturnUrl=%2FOrganization - null null
+2025-06-16 23:57:39.388 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:57:39.391 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-16 23:57:39.404 +03:00 [INF] Executing ViewResult, running view Login.
+2025-06-16 23:57:39.416 +03:00 [INF] Executed ViewResult - view Login executed in 13.6094ms.
+2025-06-16 23:57:39.419 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Login (Qurbanet) in 24.1889ms
+2025-06-16 23:57:39.421 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:57:39.423 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/Login?ReturnUrl=%2FOrganization - 200 null text/html; charset=utf-8 41.2863ms
+2025-06-16 23:57:39.438 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:57:39.438 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:57:39.444 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 5.4647ms
+2025-06-16 23:57:39.455 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.3019ms
+2025-06-16 23:57:47.567 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/Account/Login - application/x-www-form-urlencoded 208
+2025-06-16 23:57:47.575 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:57:47.587 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-16 23:57:48.675 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__username_0='?' (Size = 3), @__password_1='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreateDate", "u"."CreateUserId", "u"."Email", "u"."IsDeleted", "u"."Name", "u"."Password", "u"."Phone", "u"."Surname", "u"."UpdateDate", "u"."UpdateUserId", "u"."UserType", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__username_0 AND "u"."Password" = @__password_1
+2025-06-16 23:57:48.770 +03:00 [INF] AuthenticationScheme: Cookies signed in.
+2025-06-16 23:57:48.772 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-16 23:57:48.774 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Login (Qurbanet) in 1182.1381ms
+2025-06-16 23:57:48.776 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:57:48.780 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 23:57:48.781 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/Account/Login - 302 0 null 1213.638ms
+2025-06-16 23:57:48.784 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:57:48.787 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 23:57:48.789 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:57:48.793 +03:00 [INF] Executed ViewResult - view Index executed in 3.3764ms.
+2025-06-16 23:57:48.795 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 5.3899ms
+2025-06-16 23:57:48.796 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:57:48.797 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 17.1117ms
+2025-06-16 23:57:48.818 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:57:48.818 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:57:48.823 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 5.048ms
+2025-06-16 23:57:48.841 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.4639ms
+2025-06-16 23:57:50.649 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-16 23:57:50.657 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 23:57:50.663 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-16 23:57:50.736 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-16 23:57:50.756 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:57:50.763 +03:00 [INF] Executed ViewResult - view Index executed in 8.0217ms.
+2025-06-16 23:57:50.765 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 99.2337ms
+2025-06-16 23:57:50.767 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 23:57:50.769 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 200 null text/html; charset=utf-8 120.3133ms
+2025-06-16 23:57:50.788 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:57:50.789 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:57:50.794 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 5.8098ms
+2025-06-16 23:57:50.804 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.8968ms
+2025-06-16 23:57:52.133 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization/Create - null null
+2025-06-16 23:57:52.139 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Organizer|Admin)
+2025-06-16 23:57:52.144 +03:00 [INF] AuthenticationScheme: Cookies was forbidden.
+2025-06-16 23:57:52.147 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization/Create - 302 0 null 14.3ms
+2025-06-16 23:57:52.150 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/AccessDenied?ReturnUrl=%2FOrganization%2FCreate - null null
+2025-06-16 23:57:52.157 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/AccessDenied?ReturnUrl=%2FOrganization%2FCreate - 404 0 null 6.9172ms
+2025-06-16 23:57:52.163 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7225/Account/AccessDenied, Response status code: 404
+2025-06-16 23:58:31.858 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:58:31.873 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 15.0116ms
+2025-06-16 23:58:37.160 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Customer - null null
+2025-06-16 23:58:37.166 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.CustomerController.Index (Qurbanet)'
+2025-06-16 23:58:37.172 +03:00 [INF] Route matched with {action = "Index", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.CustomerController (Qurbanet).
+2025-06-16 23:58:37.197 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."CreateDate", "c"."CreateUserId", "c"."Email", "c"."FullName", "c"."IsDeleted", "c"."Notes", "c"."PhoneNumber", "c"."UpdateDate", "c"."UpdateUserId"
+FROM "Customers" AS "c"
+2025-06-16 23:58:37.205 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:58:37.213 +03:00 [INF] Executed ViewResult - view Index executed in 8.1544ms.
+2025-06-16 23:58:37.223 +03:00 [INF] Executed action Qurbanet.Controllers.CustomerController.Index (Qurbanet) in 47.8845ms
+2025-06-16 23:58:37.224 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.CustomerController.Index (Qurbanet)'
+2025-06-16 23:58:37.225 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Customer - 200 null text/html; charset=utf-8 66.0525ms
+2025-06-16 23:58:37.243 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:58:37.248 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 5.1645ms
+2025-06-16 23:58:37.271 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:58:37.290 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.5767ms
+2025-06-16 23:58:38.486 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Sale - null null
+2025-06-16 23:58:38.492 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.SaleController.Index (Qurbanet)'
+2025-06-16 23:58:38.500 +03:00 [INF] Route matched with {action = "Index", controller = "Sale"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.SaleController (Qurbanet).
+2025-06-16 23:58:38.522 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."AmountPaid", "s"."AnimalId", "s"."CreateDate", "s"."CreateUserId", "s"."CustomerId", "s"."IsDeleted", "s"."Notes", "s"."SaleDate", "s"."SalePrice", "s"."UpdateDate", "s"."UpdateUserId"
+FROM "Sales" AS "s"
+2025-06-16 23:58:38.528 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:58:38.537 +03:00 [INF] Executed ViewResult - view Index executed in 9.1073ms.
+2025-06-16 23:58:38.539 +03:00 [INF] Executed action Qurbanet.Controllers.SaleController.Index (Qurbanet) in 32.6673ms
+2025-06-16 23:58:38.540 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.SaleController.Index (Qurbanet)'
+2025-06-16 23:58:38.542 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Sale - 200 null text/html; charset=utf-8 56.1617ms
+2025-06-16 23:58:38.564 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:58:38.565 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:58:38.574 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.886ms
+2025-06-16 23:58:38.587 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.9186ms
+2025-06-16 23:58:39.526 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Customer - null null
+2025-06-16 23:58:39.533 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.CustomerController.Index (Qurbanet)'
+2025-06-16 23:58:39.534 +03:00 [INF] Route matched with {action = "Index", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.CustomerController (Qurbanet).
+2025-06-16 23:58:39.539 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."CreateDate", "c"."CreateUserId", "c"."Email", "c"."FullName", "c"."IsDeleted", "c"."Notes", "c"."PhoneNumber", "c"."UpdateDate", "c"."UpdateUserId"
+FROM "Customers" AS "c"
+2025-06-16 23:58:39.543 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:58:39.546 +03:00 [INF] Executed ViewResult - view Index executed in 3.4641ms.
+2025-06-16 23:58:39.549 +03:00 [INF] Executed action Qurbanet.Controllers.CustomerController.Index (Qurbanet) in 11.569ms
+2025-06-16 23:58:39.551 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.CustomerController.Index (Qurbanet)'
+2025-06-16 23:58:39.553 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Customer - 200 null text/html; charset=utf-8 27.523ms
+2025-06-16 23:58:39.572 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:58:39.572 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:58:39.582 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.9238ms
+2025-06-16 23:58:39.585 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.658ms
+2025-06-16 23:58:40.622 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Sale - null null
+2025-06-16 23:58:40.627 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.SaleController.Index (Qurbanet)'
+2025-06-16 23:58:40.629 +03:00 [INF] Route matched with {action = "Index", controller = "Sale"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.SaleController (Qurbanet).
+2025-06-16 23:58:40.635 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."AmountPaid", "s"."AnimalId", "s"."CreateDate", "s"."CreateUserId", "s"."CustomerId", "s"."IsDeleted", "s"."Notes", "s"."SaleDate", "s"."SalePrice", "s"."UpdateDate", "s"."UpdateUserId"
+FROM "Sales" AS "s"
+2025-06-16 23:58:40.638 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:58:40.641 +03:00 [INF] Executed ViewResult - view Index executed in 3.2852ms.
+2025-06-16 23:58:40.644 +03:00 [INF] Executed action Qurbanet.Controllers.SaleController.Index (Qurbanet) in 10.6656ms
+2025-06-16 23:58:40.646 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.SaleController.Index (Qurbanet)'
+2025-06-16 23:58:40.649 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Sale - 200 null text/html; charset=utf-8 27.395ms
+2025-06-16 23:58:40.666 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:58:40.666 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:58:40.676 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 10.0553ms
+2025-06-16 23:58:40.690 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.1042ms
+2025-06-16 23:58:42.136 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 23:58:42.141 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:58:42.143 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 23:58:42.146 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:58:42.149 +03:00 [INF] Executed ViewResult - view Index executed in 3.4598ms.
+2025-06-16 23:58:42.151 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 5.7622ms
+2025-06-16 23:58:42.153 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:58:42.155 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 19.1633ms
+2025-06-16 23:58:42.176 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:58:42.177 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:58:42.181 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 4.8163ms
+2025-06-16 23:58:42.191 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.4842ms
+2025-06-16 23:58:43.219 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Organization - null null
+2025-06-16 23:58:43.225 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 23:58:43.226 +03:00 [INF] Route matched with {action = "Index", controller = "Organization"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Qurbanet.Controllers.OrganizationController (Qurbanet).
+2025-06-16 23:58:43.231 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."CreateDate", "o"."CreateUserId", "o"."EndDate", "o"."IsDeleted", "o"."IsPaid", "o"."Name", "o"."StartDate", "o"."UpdateDate", "o"."UpdateUserId", "o"."UserId", "o"."Year"
+FROM "Organizations" AS "o"
+2025-06-16 23:58:43.234 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:58:43.237 +03:00 [INF] Executed ViewResult - view Index executed in 2.8486ms.
+2025-06-16 23:58:43.239 +03:00 [INF] Executed action Qurbanet.Controllers.OrganizationController.Index (Qurbanet) in 9.7629ms
+2025-06-16 23:58:43.240 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.OrganizationController.Index (Qurbanet)'
+2025-06-16 23:58:43.242 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Organization - 200 null text/html; charset=utf-8 23.1673ms
+2025-06-16 23:58:43.261 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:58:43.262 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:58:43.271 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 8.7094ms
+2025-06-16 23:58:43.275 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.8644ms
+2025-06-16 23:59:24.736 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/Logout - null null
+2025-06-16 23:59:24.742 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Logout (Qurbanet)'
+2025-06-16 23:59:24.744 +03:00 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-16 23:59:24.748 +03:00 [INF] AuthenticationScheme: Cookies signed out.
+2025-06-16 23:59:24.749 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2025-06-16 23:59:24.751 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Logout (Qurbanet) in 3.5416ms
+2025-06-16 23:59:24.753 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Logout (Qurbanet)'
+2025-06-16 23:59:24.758 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/Logout - 302 0 null 22.1045ms
+2025-06-16 23:59:24.766 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/ - null null
+2025-06-16 23:59:24.774 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:59:24.775 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Qurbanet.Controllers.HomeController (Qurbanet).
+2025-06-16 23:59:24.778 +03:00 [INF] Executing ViewResult, running view Index.
+2025-06-16 23:59:24.781 +03:00 [INF] Executed ViewResult - view Index executed in 3.1466ms.
+2025-06-16 23:59:24.783 +03:00 [INF] Executed action Qurbanet.Controllers.HomeController.Index (Qurbanet) in 5.6193ms
+2025-06-16 23:59:24.785 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.HomeController.Index (Qurbanet)'
+2025-06-16 23:59:24.787 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/ - 200 null text/html; charset=utf-8 22.9427ms
+2025-06-16 23:59:24.807 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:59:24.815 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:59:24.830 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 14.9197ms
+2025-06-16 23:59:24.831 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.4678ms
+2025-06-16 23:59:26.159 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/Register - null null
+2025-06-16 23:59:26.167 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Register (Qurbanet)'
+2025-06-16 23:59:26.173 +03:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-16 23:59:26.182 +03:00 [INF] Executing ViewResult, running view Register.
+2025-06-16 23:59:26.235 +03:00 [INF] Executed ViewResult - view Register executed in 53.4841ms.
+2025-06-16 23:59:26.236 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Register (Qurbanet) in 55.9022ms
+2025-06-16 23:59:26.239 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Register (Qurbanet)'
+2025-06-16 23:59:26.240 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/Register - 200 null text/html; charset=utf-8 80.8563ms
+2025-06-16 23:59:26.256 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:59:26.259 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 3.7776ms
+2025-06-16 23:59:26.289 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:59:26.298 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.0565ms
+2025-06-16 23:59:29.295 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/Account/Login - null null
+2025-06-16 23:59:29.300 +03:00 [INF] Executing endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:59:29.302 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Qurbanet.Controllers.AccountController (Qurbanet).
+2025-06-16 23:59:29.323 +03:00 [INF] Executing ViewResult, running view Login.
+2025-06-16 23:59:29.328 +03:00 [INF] Executed ViewResult - view Login executed in 4.3004ms.
+2025-06-16 23:59:29.330 +03:00 [INF] Executed action Qurbanet.Controllers.AccountController.Login (Qurbanet) in 23.5553ms
+2025-06-16 23:59:29.332 +03:00 [INF] Executed endpoint 'Qurbanet.Controllers.AccountController.Login (Qurbanet)'
+2025-06-16 23:59:29.334 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/Account/Login - 200 null text/html; charset=utf-8 39.6114ms
+2025-06-16 23:59:29.351 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 23:59:29.351 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2025-06-16 23:59:29.356 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 4.7783ms
+2025-06-16 23:59:29.368 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.619ms

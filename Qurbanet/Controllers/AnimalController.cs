@@ -4,8 +4,8 @@ using Qurbanet.Models.DTOs.Animal;
 using Qurbanet.Services.Interfaces;
 
 namespace Qurbanet.Controllers
-    [Authorize]
 {
+    [Authorize]
     public class AnimalController : Controller
     {
         private readonly IAnimalService _service;

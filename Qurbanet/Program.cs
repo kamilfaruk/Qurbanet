@@ -1,13 +1,11 @@
-using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Qurbanet.Extensions;
-using Qurbanet.Validators.User;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options => { options.LoginPath = "/Account/Login"; options.LogoutPath = "/Account/Logout"; });
-app.UseAuthentication();
+
 // Serilog yapýlandýrmasý
 builder.AddSerilogLogging();
 
@@ -16,6 +14,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddApplicationServices(builder.Configuration);
 
 var app = builder.Build();
+
+app.UseAuthentication();
 
 // Middlewares
 app.UseCustomMiddlewares();
