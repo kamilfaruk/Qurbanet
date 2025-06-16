@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Qurbanet.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -12,6 +14,12 @@ namespace Qurbanet.Controllers
         }
 
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        public IActionResult Guide()
         {
             return View();
         }

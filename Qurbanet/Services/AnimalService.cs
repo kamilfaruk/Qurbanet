@@ -1,6 +1,7 @@
 using AutoMapper;
 using Qurbanet.Database;
 using Qurbanet.Models.Entities;
+using Qurbanet.Database.Repositories;
 using Qurbanet.Models.DTOs.Animal;
 using Qurbanet.Services.Interfaces;
 using Qurbanet.Helpers;
@@ -11,19 +12,20 @@ namespace Qurbanet.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly AnimalRepository _animalRepository;
         private readonly ILogger<AnimalService> _logger;
 
-        public AnimalService(IUnitOfWork unitOfWork, IMapper mapper, ILogger<AnimalService> logger)
+        public AnimalService(IUnitOfWork unitOfWork, IMapper mapper, ILogger<AnimalService> logger, AnimalRepository animalRepository)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _logger = logger;
+            _animalRepository = animalRepository;
         }
 
         public async Task<List<AnimalListDto>> GetAllByOrganizationAsync(int organizationId)
         {
-            var repo = _unitOfWork.Repository<Animal>();
-            var list = await repo.FindAsync(a => a.OrganizationId == organizationId);
+            var list = await _animalRepository.GetByOrganizationAsync(organizationId);
             return _mapper.Map<List<AnimalListDto>>(list);
         }
 

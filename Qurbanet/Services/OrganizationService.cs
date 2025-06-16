@@ -73,10 +73,16 @@ namespace Qurbanet.Services
 
             var progress = new OrganizationProgressDto
             {
-                CuttingOrder = events.Where(e => e.Stage == "Kesim" && e.EndTime == null).OrderBy(e => e.OrderNumber).FirstOrDefault()?.OrderNumber,
-                SkinningOrder = events.Where(e => e.Stage == "DeriYüzme" && e.EndTime == null).OrderBy(e => e.OrderNumber).FirstOrDefault()?.OrderNumber,
-                ChoppingOrder = events.Where(e => e.Stage == "Parçalama" && e.EndTime == null).OrderBy(e => e.OrderNumber).FirstOrDefault()?.OrderNumber,
-                DeliveredCount = events.Count(e => e.Stage == "Teslim" && e.EndTime != null)
+                CuttingOrder = events.Where(e => e.Stage == Models.Enums.Stage.Kesim && e.EndTime == null)
+                                      .OrderBy(e => e.OrderNumber)
+                                      .FirstOrDefault()?.OrderNumber,
+                SkinningOrder = events.Where(e => e.Stage == Models.Enums.Stage.DeriYuzme && e.EndTime == null)
+                                       .OrderBy(e => e.OrderNumber)
+                                       .FirstOrDefault()?.OrderNumber,
+                ChoppingOrder = events.Where(e => e.Stage == Models.Enums.Stage.Parcalama && e.EndTime == null)
+                                       .OrderBy(e => e.OrderNumber)
+                                       .FirstOrDefault()?.OrderNumber,
+                DeliveredCount = events.Count(e => e.Stage == Models.Enums.Stage.Teslim && e.EndTime != null)
             };
             return progress;
         }
